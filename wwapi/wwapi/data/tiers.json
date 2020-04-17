@@ -1,0 +1,32 @@
+[
+    {
+        "name": "ww.tiers.display",
+        "separator": "",
+        "position": 0,
+        "key": "value"
+    },
+    {
+        "name": "ww.tiers.breakdown",
+        "separator": "-",
+        "position": 1,
+        "key": "value"
+    },
+    {
+        "name": "ww.tiers.gloss",
+        "separator": "-",
+        "position": 2,
+        "key": "gloss"
+    },
+    {
+        "name": "ww.tiers.breakdown-translation",
+        "separator": "-",
+        "position": 3,
+        "key": "english"
+    },
+    {
+        "name": "ww.tiers.translation",
+        "separator": "",
+        "position": 4,
+        "key": "english"
+    }
+]
