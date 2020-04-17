@@ -4,7 +4,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -43,7 +43,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -82,7 +82,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -121,7 +121,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -160,7 +160,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -199,7 +199,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -238,7 +238,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -277,7 +277,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -316,7 +316,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -355,7 +355,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -394,7 +394,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -433,7 +433,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -472,7 +472,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -511,7 +511,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -550,7 +550,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "habpres"
+            "affopt": "habpres"
         },
         "output": [
             {
@@ -589,7 +589,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -646,7 +646,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -703,7 +703,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -760,7 +760,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -817,7 +817,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -874,7 +874,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -931,7 +931,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -988,7 +988,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -1045,7 +1045,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -1102,7 +1102,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -1159,7 +1159,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -1216,7 +1216,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -1273,7 +1273,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -1330,7 +1330,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -1387,7 +1387,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "habfut"
+            "affopt": "habfut"
         },
         "output": [
             {
@@ -1444,7 +1444,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1492,7 +1492,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1540,7 +1540,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1588,7 +1588,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1636,7 +1636,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1684,7 +1684,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1732,7 +1732,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1780,7 +1780,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1828,7 +1828,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1876,7 +1876,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1924,7 +1924,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -1972,7 +1972,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -2020,7 +2020,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -2068,7 +2068,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -2116,7 +2116,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "habpast"
+            "affopt": "habpast"
         },
         "output": [
             {
@@ -2164,7 +2164,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2221,7 +2221,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2278,7 +2278,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2335,7 +2335,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2392,7 +2392,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2449,7 +2449,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2506,7 +2506,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2563,7 +2563,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2620,7 +2620,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2677,7 +2677,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2734,7 +2734,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2791,7 +2791,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2848,7 +2848,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2905,7 +2905,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -2962,7 +2962,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "habcond"
+            "affopt": "habcond"
         },
         "output": [
             {
@@ -3019,7 +3019,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3058,7 +3058,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3097,7 +3097,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3136,7 +3136,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3175,7 +3175,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3214,7 +3214,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3253,7 +3253,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3292,7 +3292,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3331,7 +3331,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3370,7 +3370,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3409,7 +3409,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3448,7 +3448,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3487,7 +3487,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3526,7 +3526,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3565,7 +3565,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "command"
+            "affopt": "command"
         },
         "output": [
             {
@@ -3604,7 +3604,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -3652,7 +3652,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -3700,7 +3700,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -3748,7 +3748,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -3796,7 +3796,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -3844,7 +3844,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -3892,7 +3892,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -3940,7 +3940,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -3988,7 +3988,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -4036,7 +4036,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -4084,7 +4084,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -4132,7 +4132,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -4180,7 +4180,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -4228,7 +4228,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -4276,7 +4276,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "defpast"
+            "affopt": "defpast"
         },
         "output": [
             {
@@ -4324,7 +4324,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4372,7 +4372,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4420,7 +4420,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4468,7 +4468,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4516,7 +4516,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4564,7 +4564,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4612,7 +4612,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4660,7 +4660,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4708,7 +4708,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4756,7 +4756,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4804,7 +4804,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4852,7 +4852,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4900,7 +4900,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4948,7 +4948,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -4996,7 +4996,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "indef"
+            "affopt": "indef"
         },
         "output": [
             {
@@ -5044,7 +5044,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5092,7 +5092,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5140,7 +5140,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5188,7 +5188,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5236,7 +5236,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5284,7 +5284,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5332,7 +5332,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5380,7 +5380,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5428,7 +5428,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5476,7 +5476,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5524,7 +5524,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5572,7 +5572,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5620,7 +5620,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5668,7 +5668,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5716,7 +5716,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "punctfut"
+            "affopt": "punctfut"
         },
         "output": [
             {
@@ -5764,7 +5764,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -5803,7 +5803,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -5842,7 +5842,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -5881,7 +5881,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -5920,7 +5920,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -5959,7 +5959,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -5998,7 +5998,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6037,7 +6037,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6076,7 +6076,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6115,7 +6115,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6154,7 +6154,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6193,7 +6193,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6232,7 +6232,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6271,7 +6271,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6310,7 +6310,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "perfpres"
+            "affopt": "perfpres"
         },
         "output": [
             {
@@ -6349,7 +6349,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6397,7 +6397,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6445,7 +6445,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6493,7 +6493,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6541,7 +6541,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6589,7 +6589,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6637,7 +6637,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6685,7 +6685,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6733,7 +6733,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6781,7 +6781,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6829,7 +6829,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6877,7 +6877,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6925,7 +6925,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -6973,7 +6973,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -7021,7 +7021,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "perfcond"
+            "affopt": "perfcond"
         },
         "output": [
             {
@@ -7069,7 +7069,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7108,7 +7108,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7147,7 +7147,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7186,7 +7186,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7225,7 +7225,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7264,7 +7264,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7303,7 +7303,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7342,7 +7342,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7381,7 +7381,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7420,7 +7420,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7459,7 +7459,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7498,7 +7498,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7537,7 +7537,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7576,7 +7576,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7615,7 +7615,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "presprogr"
+            "affopt": "presprogr"
         },
         "output": [
             {
@@ -7654,7 +7654,7 @@
             "root": "athsori-r",
             "agent": "1-sg",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -7693,7 +7693,7 @@
             "root": "athsori-r",
             "agent": "2-sg",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -7732,7 +7732,7 @@
             "root": "athsori-r",
             "agent": "3-sg-f",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -7771,7 +7771,7 @@
             "root": "athsori-r",
             "agent": "3-sg-m",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -7810,7 +7810,7 @@
             "root": "athsori-r",
             "agent": "3-sg-n",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -7849,7 +7849,7 @@
             "root": "athsori-r",
             "agent": "1-dl-incl",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -7888,7 +7888,7 @@
             "root": "athsori-r",
             "agent": "1-dl-excl",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -7927,7 +7927,7 @@
             "root": "athsori-r",
             "agent": "2-dl",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -7966,7 +7966,7 @@
             "root": "athsori-r",
             "agent": "3-dl-m",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -8005,7 +8005,7 @@
             "root": "athsori-r",
             "agent": "3-dl-f",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -8044,7 +8044,7 @@
             "root": "athsori-r",
             "agent": "1-pl-incl",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -8083,7 +8083,7 @@
             "root": "athsori-r",
             "agent": "1-pl-excl",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -8122,7 +8122,7 @@
             "root": "athsori-r",
             "agent": "2-pl",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -8161,7 +8161,7 @@
             "root": "athsori-r",
             "agent": "3-pl-m",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {
@@ -8200,7 +8200,7 @@
             "root": "athsori-r",
             "agent": "3-pl-f",
             "patient": "3-sg-n",
-            "aff-option": "statepres"
+            "affopt": "statepres"
         },
         "output": [
             {

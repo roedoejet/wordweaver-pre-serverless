@@ -87,11 +87,11 @@ class RequestParams(BaseModel):
 
 
 class ResponseMorpheme(BaseModel):
-    position: int
-    value: str
-    gloss: str
-    english: str
-    type: List[str]
+    position: Optional[int]
+    value: Optional[str]
+    gloss: Optional[str]
+    english: Optional[str]
+    type: Optional[List[str]]
 
 
 Conjugation = List[ResponseMorpheme]

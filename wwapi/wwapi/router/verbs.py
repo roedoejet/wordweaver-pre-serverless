@@ -6,28 +6,19 @@ from typing import List
 from fastapi import APIRouter
 
 from wwapi.models import Verb
-# Data
-from wwapi.data import VERB_DATA
+
+from wwapi.data.db import find
 
 router = APIRouter()
 
+
 @router.get("/verbs", response_model=List[Verb])
 def read_verbs() -> List[Verb]:
-    verbs = VERB_DATA
-    return verbs
+    verbs = find({'data_type': 'verb'})
+    return verbs['docs']
 
-# # API Route
-# @router.get("/verbs", response_model=List[Verb])
-# def read_verbs(verb_filter: Verb = {}) -> List[Verb]:
-#     bucket = get_bucket()
-#     verbs = get_verbs(bucket, verb_filter)
-#     return verbs
 
-# # DB Handler
-# def get_verbs(bucket: Bucket, verb_filter: Verb):
-#     doc_id = f"verbs"
-#     result = bucket.get(doc_id, quiet=True)
-#     if not result.value:
-#         return None
-#     print(result.value)
-#     return result.value
+@router.get("/verbs/{tag}", response_model=Verb)
+def read_verb_by_id(tag: str) -> Verb:
+    verbs = find({'data_type': 'verb', 'tag': tag})
+    return verbs['docs']
