@@ -80,7 +80,8 @@ def initialize_db():
 
     data_db = 'data'
     logger.warning(f"Deleting {data_db} database")
-    del couchserver[data_db]
+    if data_db in couchserver:
+        del couchserver[data_db]
     db = couchserver.create(data_db)
     
     for affix in AFFIX_DATA:
