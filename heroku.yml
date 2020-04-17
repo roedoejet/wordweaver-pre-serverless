@@ -1,0 +1,6 @@
+build:
+    docker:
+        web: wwapi/Dockerfile
+        db: Dockerfile
+run:
+    web: wwapi init && uvicorn --reload --host 0.0.0.0 --port $PORT --log-level debug wwapi.main:app
