@@ -1,0 +1,6 @@
+requests
+cloudant
+fastapi>=0.16.0
+uvicorn
+gunicorn
+couchdb

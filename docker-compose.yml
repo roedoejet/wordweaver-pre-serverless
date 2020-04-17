@@ -1,0 +1,22 @@
+version: '3'
+services:
+    db:        
+        build: '.'
+        volumes: 
+            - ./etc:/opt/couchdb/etc/local.d  
+            - ./data:/opt/couchdb/data
+            - ./log:/opt/couchdb/var/log
+        ports:
+            - "5984:5984"
+        environment:
+            COUCHDB_USER: admin
+            COUCHDB_PASSWORD: password
+        networks:
+            - default
+    web:
+        build: './wwapi'
+        ports:
+            - "80:80"
+networks:
+    web:
+        external: true

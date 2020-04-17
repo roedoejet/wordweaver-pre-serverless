@@ -1,0 +1,146 @@
+[
+    {
+        "thematic_relation": "purple",
+        "display": "kon'n\u00e9harons",
+        "gloss": "beat someone in a game",
+        "tag": "7neharon-p",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "blue",
+        "display": "wake'n\u00edhskwas",
+        "gloss": "become/run late",
+        "tag": "7nihskwen-b",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "ke'n\u00edkhons",
+        "gloss": "sew something",
+        "tag": "7nikhon-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "purple",
+        "display": "kon'nikonhrakw\u00e9nyes",
+        "gloss": "convince someone of something",
+        "tag": "7nikonhrakw-p",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "blue",
+        "display": "wake'nik\u00f3nhrhen's",
+        "gloss": "forget something",
+        "tag": "7nikonhren7-b",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "\u00edke'seres",
+        "gloss": "drag something",
+        "tag": "7sere-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "purple",
+        "display": "kon'sh\u00e9nnyes",
+        "gloss": "defeat someone",
+        "tag": "7shenn-p",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "\u00edke'sko's",
+        "gloss": "drown",
+        "tag": "7sko7n-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "ke'sk\u00f3ntha",
+        "gloss": "roast, grill something",
+        "tag": "7skont-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "ka's\u00e9nhtha",
+        "gloss": "lower something down",
+        "tag": "a7sen-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "ka'sw\u00e0:tha",
+        "gloss": "extinguish a fire, put out a light",
+        "tag": "a7swaht-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "tk\u00e0:rats",
+        "gloss": "count",
+        "tag": "ahrat-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "kahs\u00e9htha",
+        "gloss": "hide something",
+        "tag": "ahseht-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "kahsh\u00e0:kha",
+        "gloss": "cough",
+        "tag": "ahsha7k-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "kahsk\u00e1:neks",
+        "gloss": "wish for something",
+        "tag": "ahskanek-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "k\u00e1hsohs",
+        "gloss": "colour/paint something",
+        "tag": "ahso-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "red",
+        "display": "kahsont\u00e9:rens",
+        "gloss": "connect something to something",
+        "tag": "ahsonter-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
+        "thematic_relation": "blue",
+        "display": "wak\u00e1hta's",
+        "gloss": "get full",
+        "tag": "ahta-b",
+        "required_affixes": [],
+        "position": 0
+    }
+]
