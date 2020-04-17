@@ -89,7 +89,7 @@ def initialize_db():
         db.save(affix)
 
     for affix_option in AFFIX_OPTION_DATA:
-        affix_option['data_type'] = 'affopt'
+        affix_option['data_type'] = 'option'
         db.save(affix_option)
 
     for pronoun in PRONOUN_DATA:

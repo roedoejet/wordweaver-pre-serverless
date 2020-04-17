@@ -8,6 +8,14 @@
         "position": 0
     },
     {
+        "thematic_relation": "red",
+        "display": "kathsó:ris",
+        "gloss": "eat soup",
+        "tag": "athsori-r",
+        "required_affixes": [],
+        "position": 0
+    },
+    {
         "thematic_relation": "blue",
         "display": "wake'n\u00edhskwas",
         "gloss": "become/run late",

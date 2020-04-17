@@ -22,12 +22,12 @@ def read_affix_by_id(tag: str) -> Affix:
     affixes = find({'data_type': 'affix', 'tag': tag})
     return affixes['docs']
 
-@router.get("/affix-options", response_model=List[AffixOption], tags=["affixes"])
+@router.get("/options", response_model=List[AffixOption], tags=["affixes"])
 def read_affix_options() -> List[AffixOption]:
-    affix_options = find({'data_type': 'affopt'})
+    affix_options = find({'data_type': 'option'})
     return affix_options['docs']
 
-@router.get("/affix-options/{tag}", response_model=AffixOption, tags=["affixes"])
-def read_affopt_by_id(tag: str) -> AffixOption:
-    affix_options = find({'data_type': 'affopt', 'tag': tag})
+@router.get("/options/{tag}", response_model=AffixOption, tags=["affixes"])
+def read_option_by_id(tag: str) -> AffixOption:
+    affix_options = find({'data_type': 'option', 'tag': tag})
     return affix_options['docs']

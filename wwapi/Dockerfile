@@ -11,4 +11,4 @@ RUN pip install -e /app
 # Prod
 # CMD ["uvicorn", "wwapi.main:app", "--host", "$HOST", "--port", "$PORT"]
 # Dev
-CMD ["uvicorn", "--reload", "--host", "0.0.0.0", "--port", "80", "--log-level", "debug", "wwapi.main:app"]
+# CMD ["uvicorn", "--reload", "--host", "0.0.0.0", "--port", "5200", "--log-level", "debug", "wwapi.main:app"]

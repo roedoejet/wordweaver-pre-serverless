@@ -3,7 +3,6 @@ import click
 from loguru import logger
 from wwapi.data.utils import initialize_db, validate
 
-@click.version_option(version='0.0.1', prog_name="wwapi")
 @click.group()
 def cli():
     '''Management script for WordWeaver'''

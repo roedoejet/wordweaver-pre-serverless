@@ -12,23 +12,23 @@ from wwapi.data.utils import find
 router = APIRouter()
 
 
-def create_selector(affopt, agent, patient):
-    return {'affopt': affopt, }
+def create_selector(option, agent, patient):
+    return {'option': option, }
 
 
 @router.get("/conjugations", response_model=Response, tags=["conjugations"])
-def read_conjugations(root: List[str] = Query(None), affopt: List[str] = Query(None),
+def read_conjugations(root: List[str] = Query(None), option: List[str] = Query(None),
                       agent: List[str] = Query(None), patient: List[str] = Query(None)) -> Response:
     input_selector = {}
     if root:
         input_selector['root'] = {'$in': root}
-    if affopt:
-        input_selector['affopt'] = {'$in': affopt}
+    if option:
+        input_selector['option'] = {'$in': option}
     if agent:
         input_selector['agent'] = {'$in': agent}
     if patient:
         input_selector['patient'] = {'$in': patient}
-    if root or affopt or agent or patient:
+    if root or option or agent or patient:
         selector = {'data_type': 'conjugation', 'input': input_selector}
     else:
         selector = {'data_type': 'conjugation'}

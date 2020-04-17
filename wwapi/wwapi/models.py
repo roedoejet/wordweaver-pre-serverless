@@ -68,7 +68,7 @@ class Verb(BaseModel):
 
 class ConjugationInput(BaseModel):
     root: str
-    affopt: str
+    option: str
     agent: str
     patient: str
 
@@ -80,7 +80,7 @@ class OptionalParam(BaseModel):
 
 class RequestParams(BaseModel):
     root: List[str]
-    affopt: List[str]
+    option: List[str]
     agent: List[str]
     patient: List[str]
     optional: Optional[List[OptionalParam]]
