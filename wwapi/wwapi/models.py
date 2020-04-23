@@ -1,25 +1,11 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Union
 from enum import Enum
-
-
-class AffixType(Enum):
-    aspect = 1
-    required = 2
-    temporal = 3
-    post_aspect = 4
 
 
 class Morpheme(BaseModel):
     value: str = ''
     position: int = 0
-
-
-class Affix(BaseModel):
-    tag: str = ''
-    gloss: str = ''
-    type: str = ''
-    morphemes: List[Morpheme]
 
 
 class TierOptions(BaseModel):
@@ -35,11 +21,10 @@ class Tier(BaseModel):
     options: TierOptions
 
 
-class AffixOption(BaseModel):
+class Option(BaseModel):
     ''' Required '''
-    tag: str = ''
     gloss: str = ''
-    affixes: List[Affix]
+    tag: str = ''
 
 
 class Pronoun(BaseModel):
@@ -58,19 +43,14 @@ class Pronoun(BaseModel):
 
 class Verb(BaseModel):
     ''' Required '''
-    thematic_relation: str = ''
-    display: str = ''
     gloss: str = ''
     tag: str = ''
-    required_affixes: List[Affix]
-    position: int = 0
 
 
 class ConjugationInput(BaseModel):
     root: str
     option: str
-    agent: str
-    patient: str
+    agent: Union[List[str], str]
 
 
 class OptionalParam(BaseModel):

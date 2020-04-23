@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from wwapi.data import AFFIX_DATA, AFFIX_OPTION_DATA, CONJUGATION_DATA, VERB_DATA, PRONOUN_DATA, TIER_DATA
-from wwapi.models import Affix, AffixOption, Pronoun, Verb, ResponseObject, Tier
+from wwapi.data import OPTION_DATA, CONJUGATION_DATA, VERB_DATA, PRONOUN_DATA, TIER_DATA
+from wwapi.models import Option, Pronoun, Verb, ResponseObject, Tier
 import requests
 import json
 import couchdb
@@ -15,26 +15,18 @@ logger.remove()
 logger.add(sys.stderr, format=fmt, colorize=True)
 
 
-
 def validate():
     # Shared messages
     CHECKING = "Checking {} {}..."
     ERROR = "Uh oh! not all of your {} matched the declared type. \nYour tier looks like this:\n\n {}\n\n but we expected: \n\n{}"
-    # Check Affixes
-    logger.info(CHECKING.format(len(AFFIX_DATA), 'affixes'))
-    for affix in tqdm(AFFIX_DATA):
+    # Check Options
+    logger.info(CHECKING.format(len(OPTION_DATA), 'options'))
+    for option in tqdm(OPTION_DATA):
         try:
-            Affix.validate(affix)
+            Option.validate(option)
         except ValidationError:
-            logger.error(ERROR.format('affixes', pformat(affix), pformat(Affix.schema()['properties'])))
-            return
-    # Check Affix Options
-    logger.info(CHECKING.format(len(AFFIX_OPTION_DATA), 'affix options'))
-    for affix_option in tqdm(AFFIX_OPTION_DATA):
-        try:
-            AffixOption.validate(affix_option)
-        except ValidationError:
-            logger.error(ERROR.format('affix options', pformat(affix_option), pformat(AffixOption.schema()['properties'])))
+            logger.error(ERROR.format('options', pformat(
+                option), pformat(Option.schema()['properties'])))
             return
     # Check Pronouns
     logger.info(CHECKING.format(len(PRONOUN_DATA), 'pronouns'))
@@ -42,7 +34,8 @@ def validate():
         try:
             Pronoun.validate(pronoun)
         except ValidationError:
-            logger.error(ERROR.format('pronouns', pformat(pronoun), pformat(Pronoun.schema()['properties'])))
+            logger.error(ERROR.format('pronouns', pformat(pronoun),
+                                      pformat(Pronoun.schema()['properties'])))
             return
     # Check Verbs
     logger.info(CHECKING.format(len(VERB_DATA), 'verbs'))
@@ -50,7 +43,8 @@ def validate():
         try:
             Verb.validate(verb)
         except ValidationError:
-            logger.error(ERROR.format('verbs', pformat(verb), pformat(Verb.schema()['properties'])))
+            logger.error(ERROR.format('verbs', pformat(verb),
+                                      pformat(Verb.schema()['properties'])))
             return
     # Check Conjugations
     logger.info(CHECKING.format(len(CONJUGATION_DATA), 'conjugations'))
@@ -58,7 +52,8 @@ def validate():
         try:
             ResponseObject.validate(conjugation)
         except ValidationError:
-            logger.error(ERROR.format('conjugations', pformat(conjugation), pformat(ResponseObject.schema()['properties'])))
+            logger.error(ERROR.format('conjugations', pformat(
+                conjugation), pformat(ResponseObject.schema()['properties'])))
             return
     # Check Tiers
     logger.info(CHECKING.format(len(TIER_DATA), 'tiers'))
@@ -66,7 +61,8 @@ def validate():
         try:
             Tier.validate(tier)
         except ValidationError:
-            logger.error(ERROR.format('tiers', pformat(tier), pformat(Tier.schema()['properties'])))
+            logger.error(ERROR.format('tiers', pformat(tier),
+                                      pformat(Tier.schema()['properties'])))
             return
     logger.info("Success! All data checked")
 
@@ -83,14 +79,10 @@ def initialize_db():
     if data_db in couchserver:
         del couchserver[data_db]
     db = couchserver.create(data_db)
-    
-    for affix in AFFIX_DATA:
-        affix['data_type'] = 'affix'
-        db.save(affix)
 
-    for affix_option in AFFIX_OPTION_DATA:
-        affix_option['data_type'] = 'option'
-        db.save(affix_option)
+    for option in OPTION_DATA:
+        option['data_type'] = 'option'
+        db.save(option)
 
     for pronoun in PRONOUN_DATA:
         pronoun['data_type'] = 'pronoun'
@@ -109,10 +101,12 @@ def initialize_db():
         db.save(conjugation)
     logger.info("Success! All data initialized into Database")
 
+
 def find(selector):
     headers = {'Content-type': 'application/json'}
     url = 'http://admin:password@db:5984/data/_find'
-    response = requests.post(url, data=json.dumps({'selector': selector}), headers=headers)
+    response = requests.post(url, data=json.dumps(
+        {'selector': selector}), headers=headers)
     return response.json()
 
 

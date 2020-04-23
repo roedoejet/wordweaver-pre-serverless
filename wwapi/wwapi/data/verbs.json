@@ -1,154 +1,598 @@
 [
     {
-        "thematic_relation": "purple",
-        "display": "kon'n\u00e9harons",
-        "gloss": "beat someone in a game",
-        "tag": "7neharon-p",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "aller",
+        "tag": "aller"
     },
     {
-        "thematic_relation": "red",
-        "display": "kathsó:ris",
-        "gloss": "eat soup",
-        "tag": "athsori-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "avoir",
+        "tag": "avoir"
     },
     {
-        "thematic_relation": "blue",
-        "display": "wake'n\u00edhskwas",
-        "gloss": "become/run late",
-        "tag": "7nihskwen-b",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "ravoir",
+        "tag": "ravoir"
     },
     {
-        "thematic_relation": "red",
-        "display": "ke'n\u00edkhons",
-        "gloss": "sew something",
-        "tag": "7nikhon-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "\u00eatre",
+        "tag": "etre"
     },
     {
-        "thematic_relation": "purple",
-        "display": "kon'nikonhrakw\u00e9nyes",
-        "gloss": "convince someone of something",
-        "tag": "7nikonhrakw-p",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "abr\u00e9ger",
+        "tag": "abreger"
     },
     {
-        "thematic_relation": "blue",
-        "display": "wake'nik\u00f3nhrhen's",
-        "gloss": "forget something",
-        "tag": "7nikonhren7-b",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "absoudre",
+        "tag": "absoudre"
     },
     {
-        "thematic_relation": "red",
-        "display": "\u00edke'seres",
-        "gloss": "drag something",
-        "tag": "7sere-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "accro\u00eetre",
+        "tag": "accroitre"
     },
     {
-        "thematic_relation": "purple",
-        "display": "kon'sh\u00e9nnyes",
-        "gloss": "defeat someone",
-        "tag": "7shenn-p",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "acheter",
+        "tag": "acheter"
     },
     {
-        "thematic_relation": "red",
-        "display": "\u00edke'sko's",
-        "gloss": "drown",
-        "tag": "7sko7n-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "acqu\u00e9rir",
+        "tag": "acquerir"
     },
     {
-        "thematic_relation": "red",
-        "display": "ke'sk\u00f3ntha",
-        "gloss": "roast, grill something",
-        "tag": "7skont-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "advenir",
+        "tag": "advenir"
     },
     {
-        "thematic_relation": "red",
-        "display": "ka's\u00e9nhtha",
-        "gloss": "lower something down",
-        "tag": "a7sen-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "aimer",
+        "tag": "aimer"
     },
     {
-        "thematic_relation": "red",
-        "display": "ka'sw\u00e0:tha",
-        "gloss": "extinguish a fire, put out a light",
-        "tag": "a7swaht-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "ali\u00e9ner",
+        "tag": "aliener"
     },
     {
-        "thematic_relation": "red",
-        "display": "tk\u00e0:rats",
-        "gloss": "count",
-        "tag": "ahrat-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "amu\u00efr",
+        "tag": "amuir"
     },
     {
-        "thematic_relation": "red",
-        "display": "kahs\u00e9htha",
-        "gloss": "hide something",
-        "tag": "ahseht-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "apparoir",
+        "tag": "apparoir"
     },
     {
-        "thematic_relation": "red",
-        "display": "kahsh\u00e0:kha",
-        "gloss": "cough",
-        "tag": "ahsha7k-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "appeler",
+        "tag": "appeler"
     },
     {
-        "thematic_relation": "red",
-        "display": "kahsk\u00e1:neks",
-        "gloss": "wish for something",
-        "tag": "ahskanek-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "asseoir",
+        "tag": "asseoir"
     },
     {
-        "thematic_relation": "red",
-        "display": "k\u00e1hsohs",
-        "gloss": "colour/paint something",
-        "tag": "ahso-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "asseoir",
+        "tag": "asseoir"
     },
     {
-        "thematic_relation": "red",
-        "display": "kahsont\u00e9:rens",
-        "gloss": "connect something to something",
-        "tag": "ahsonter-r",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "assaillir",
+        "tag": "assaillir"
     },
     {
-        "thematic_relation": "blue",
-        "display": "wak\u00e1hta's",
-        "gloss": "get full",
-        "tag": "ahta-b",
-        "required_affixes": [],
-        "position": 0
+        "gloss": "boire",
+        "tag": "boire"
+    },
+    {
+        "gloss": "battre",
+        "tag": "battre"
+    },
+    {
+        "gloss": "bouillir",
+        "tag": "bouillir"
+    },
+    {
+        "gloss": "braire",
+        "tag": "braire"
+    },
+    {
+        "gloss": "bruire",
+        "tag": "bruire"
+    },
+    {
+        "gloss": "brumasser",
+        "tag": "brumasser"
+    },
+    {
+        "gloss": "c\u00e9der",
+        "tag": "ceder"
+    },
+    {
+        "gloss": "choir",
+        "tag": "choir"
+    },
+    {
+        "gloss": "chaloir",
+        "tag": "chaloir"
+    },
+    {
+        "gloss": "chauvir",
+        "tag": "chauvir"
+    },
+    {
+        "gloss": "circoncire",
+        "tag": "circoncire"
+    },
+    {
+        "gloss": "clore",
+        "tag": "clore"
+    },
+    {
+        "gloss": "conclure",
+        "tag": "conclure"
+    },
+    {
+        "gloss": "conduire",
+        "tag": "conduire"
+    },
+    {
+        "gloss": "coudre",
+        "tag": "coudre"
+    },
+    {
+        "gloss": "courir",
+        "tag": "courir"
+    },
+    {
+        "gloss": "croire",
+        "tag": "croire"
+    },
+    {
+        "gloss": "cro\u00eetre",
+        "tag": "croitre"
+    },
+    {
+        "gloss": "cr\u00e9mer",
+        "tag": "cremer"
+    },
+    {
+        "gloss": "craindre",
+        "tag": "craindre"
+    },
+    {
+        "gloss": "cueillir",
+        "tag": "cueillir"
+    },
+    {
+        "gloss": "c\u00e9l\u00e9brer",
+        "tag": "celebrer"
+    },
+    {
+        "gloss": "devoir",
+        "tag": "devoir"
+    },
+    {
+        "gloss": "dire",
+        "tag": "dire"
+    },
+    {
+        "gloss": "diss\u00e9quer",
+        "tag": "dissequer"
+    },
+    {
+        "gloss": "dissoudre",
+        "tag": "dissoudre"
+    },
+    {
+        "gloss": "dormir",
+        "tag": "dormir"
+    },
+    {
+        "gloss": "d\u00e9cevoir",
+        "tag": "decevoir"
+    },
+    {
+        "gloss": "d\u00e9choir",
+        "tag": "dechoir"
+    },
+    {
+        "gloss": "d\u00e9cr\u00e9ter",
+        "tag": "decreter"
+    },
+    {
+        "gloss": "d\u00e9pecer",
+        "tag": "depecer"
+    },
+    {
+        "gloss": "enfi\u00e9vrer",
+        "tag": "enfievrer"
+    },
+    {
+        "gloss": "envoyer",
+        "tag": "envoyer"
+    },
+    {
+        "gloss": "ester",
+        "tag": "ester"
+    },
+    {
+        "gloss": "ex\u00e9crer",
+        "tag": "execrer"
+    },
+    {
+        "gloss": "extraire",
+        "tag": "extraire"
+    },
+    {
+        "gloss": "faire",
+        "tag": "faire"
+    },
+    {
+        "gloss": "faillir",
+        "tag": "faillir"
+    },
+    {
+        "gloss": "falloir",
+        "tag": "falloir"
+    },
+    {
+        "gloss": "finir",
+        "tag": "finir"
+    },
+    {
+        "gloss": "fleurir",
+        "tag": "fleurir"
+    },
+    {
+        "gloss": "forclore",
+        "tag": "forclore"
+    },
+    {
+        "gloss": "foutre",
+        "tag": "foutre"
+    },
+    {
+        "gloss": "frire",
+        "tag": "frire"
+    },
+    {
+        "gloss": "fuir",
+        "tag": "fuir"
+    },
+    {
+        "gloss": "f\u00e9rir",
+        "tag": "ferir"
+    },
+    {
+        "gloss": "g\u00e9sir",
+        "tag": "gesir"
+    },
+    {
+        "gloss": "grasseyer",
+        "tag": "grasseyer"
+    },
+    {
+        "gloss": "ha\u00efr",
+        "tag": "hair"
+    },
+    {
+        "gloss": "harceler",
+        "tag": "harceler"
+    },
+    {
+        "gloss": "h\u00e9b\u00e9ter",
+        "tag": "hebeter"
+    },
+    {
+        "gloss": "imp\u00e9trer",
+        "tag": "impetrer"
+    },
+    {
+        "gloss": "inclure",
+        "tag": "inclure"
+    },
+    {
+        "gloss": "int\u00e9grer",
+        "tag": "integrer"
+    },
+    {
+        "gloss": "interdire",
+        "tag": "interdire"
+    },
+    {
+        "gloss": "jeter",
+        "tag": "jeter"
+    },
+    {
+        "gloss": "lever",
+        "tag": "lever"
+    },
+    {
+        "gloss": "lire",
+        "tag": "lire"
+    },
+    {
+        "gloss": "l\u00e9guer",
+        "tag": "leguer"
+    },
+    {
+        "gloss": "l\u00e9ser",
+        "tag": "leser"
+    },
+    {
+        "gloss": "luire",
+        "tag": "luire"
+    },
+    {
+        "gloss": "mener",
+        "tag": "mener"
+    },
+    {
+        "gloss": "mettre",
+        "tag": "mettre"
+    },
+    {
+        "gloss": "mourir",
+        "tag": "mourir"
+    },
+    {
+        "gloss": "mouvoir",
+        "tag": "mouvoir"
+    },
+    {
+        "gloss": "manger",
+        "tag": "manger"
+    },
+    {
+        "gloss": "maudire",
+        "tag": "maudire"
+    },
+    {
+        "gloss": "mentir",
+        "tag": "mentir"
+    },
+    {
+        "gloss": "moudre",
+        "tag": "moudre"
+    },
+    {
+        "gloss": "m\u00e9dire",
+        "tag": "medire"
+    },
+    {
+        "gloss": "na\u00eetre",
+        "tag": "naitre"
+    },
+    {
+        "gloss": "nettoyer",
+        "tag": "nettoyer"
+    },
+    {
+        "gloss": "nuire",
+        "tag": "nuire"
+    },
+    {
+        "gloss": "ou\u00efr",
+        "tag": "ouir"
+    },
+    {
+        "gloss": "occire",
+        "tag": "occire"
+    },
+    {
+        "gloss": "oindre",
+        "tag": "oindre"
+    },
+    {
+        "gloss": "ouvrir",
+        "tag": "ouvrir"
+    },
+    {
+        "gloss": "pa\u00eetre",
+        "tag": "paitre"
+    },
+    {
+        "gloss": "peler",
+        "tag": "peler"
+    },
+    {
+        "gloss": "peser",
+        "tag": "peser"
+    },
+    {
+        "gloss": "pouvoir",
+        "tag": "pouvoir"
+    },
+    {
+        "gloss": "payer",
+        "tag": "payer"
+    },
+    {
+        "gloss": "para\u00eetre",
+        "tag": "paraitre"
+    },
+    {
+        "gloss": "plaire",
+        "tag": "plaire"
+    },
+    {
+        "gloss": "pleuvoir",
+        "tag": "pleuvoir"
+    },
+    {
+        "gloss": "placer",
+        "tag": "placer"
+    },
+    {
+        "gloss": "poindre",
+        "tag": "poindre"
+    },
+    {
+        "gloss": "pourvoir",
+        "tag": "pourvoir"
+    },
+    {
+        "gloss": "prendre",
+        "tag": "prendre"
+    },
+    {
+        "gloss": "promouvoir",
+        "tag": "promouvoir"
+    },
+    {
+        "gloss": "pr\u00e9dire",
+        "tag": "predire"
+    },
+    {
+        "gloss": "pr\u00e9voir",
+        "tag": "prevoir"
+    },
+    {
+        "gloss": "pr\u00e9valoir",
+        "tag": "prevaloir"
+    },
+    {
+        "gloss": "qu\u00e9rir",
+        "tag": "querir"
+    },
+    {
+        "gloss": "rire",
+        "tag": "rire"
+    },
+    {
+        "gloss": "r\u00e9gler",
+        "tag": "regler"
+    },
+    {
+        "gloss": "r\u00e9gner",
+        "tag": "regner"
+    },
+    {
+        "gloss": "receper",
+        "tag": "receper"
+    },
+    {
+        "gloss": "rec\u00e9per",
+        "tag": "receper"
+    },
+    {
+        "gloss": "recro\u00eetre",
+        "tag": "recroitre"
+    },
+    {
+        "gloss": "rena\u00eetre",
+        "tag": "renaitre"
+    },
+    {
+        "gloss": "repa\u00eetre",
+        "tag": "repaitre"
+    },
+    {
+        "gloss": "rompre",
+        "tag": "rompre"
+    },
+    {
+        "gloss": "r\u00e9f\u00e9rer",
+        "tag": "referer"
+    },
+    {
+        "gloss": "r\u00e9f\u00e9rencier",
+        "tag": "referencier"
+    },
+    {
+        "gloss": "r\u00e9soudre",
+        "tag": "resoudre"
+    },
+    {
+        "gloss": "r\u00e9v\u00e9ler",
+        "tag": "reveler"
+    },
+    {
+        "gloss": "savoir",
+        "tag": "savoir"
+    },
+    {
+        "gloss": "semer",
+        "tag": "semer"
+    },
+    {
+        "gloss": "seoir",
+        "tag": "seoir"
+    },
+    {
+        "gloss": "sevrer",
+        "tag": "sevrer"
+    },
+    {
+        "gloss": "sourdre",
+        "tag": "sourdre"
+    },
+    {
+        "gloss": "s\u00e9cher",
+        "tag": "secher"
+    },
+    {
+        "gloss": "saillir",
+        "tag": "saillir"
+    },
+    {
+        "gloss": "servir",
+        "tag": "servir"
+    },
+    {
+        "gloss": "suffire",
+        "tag": "suffire"
+    },
+    {
+        "gloss": "suivre",
+        "tag": "suivre"
+    },
+    {
+        "gloss": "surseoir",
+        "tag": "surseoir"
+    },
+    {
+        "gloss": "sursoir",
+        "tag": "sursoir"
+    },
+    {
+        "gloss": "taire",
+        "tag": "taire"
+    },
+    {
+        "gloss": "tenir",
+        "tag": "tenir"
+    },
+    {
+        "gloss": "tendre",
+        "tag": "tendre"
+    },
+    {
+        "gloss": "vivre",
+        "tag": "vivre"
+    },
+    {
+        "gloss": "voir",
+        "tag": "voir"
+    },
+    {
+        "gloss": "vouloir",
+        "tag": "vouloir"
+    },
+    {
+        "gloss": "valoir",
+        "tag": "valoir"
+    },
+    {
+        "gloss": "vaincre",
+        "tag": "vaincre"
+    },
+    {
+        "gloss": "v\u00eatir",
+        "tag": "vetir"
+    },
+    {
+        "gloss": "\u00e9choir",
+        "tag": "echoir"
+    },
+    {
+        "gloss": "\u00e9clore",
+        "tag": "eclore"
+    },
+    {
+        "gloss": "\u00e9crire",
+        "tag": "ecrire"
     }
 ]

@@ -1,0 +1,20 @@
+{
+    "categories": {
+        "conjugations": true,
+        "options": true,
+        "pronouns": {
+            "agents": true,
+            "patients": false
+        },
+        "verbs": true
+    },
+    "items": {
+        "conjugations": true,
+        "options": true,
+        "pronouns": {
+            "agents": true,
+            "patients": false
+        },
+        "verbs": true
+    }
+}

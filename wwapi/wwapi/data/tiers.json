@@ -18,25 +18,5 @@
             "language": "L1",
             "showName": false
         }
-    },
-    {
-        "name": "gloss",
-        "separator": "-",
-        "position": 2,
-        "key": "gloss",
-        "options": {
-            "language": "L1",
-            "showName": false
-        }
-    },
-    {
-        "name": "translation",
-        "separator": "",
-        "position": 4,
-        "key": "english",
-        "options": {
-            "language": "L2",
-            "showName": false
-        }
     }
 ]

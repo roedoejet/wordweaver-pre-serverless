@@ -1,0 +1,26 @@
+[
+    {
+        "tag": "present",
+        "gloss": "Pr\u00e9sent"
+    },
+    {
+        "tag": "imperatif-present",
+        "gloss": "Imperatif Pr\u00e9sent"
+    },
+    {
+        "tag": "futur",
+        "gloss": "Futur"
+    },
+    {
+        "tag": "imparfait",
+        "gloss": "Imparfait"
+    },
+    {
+        "tag": "passe-simple",
+        "gloss": "Pass\u00e9 Simple"
+    },
+    {
+        "tag": "participe-passe",
+        "gloss": "Participe Pass\u00e9"
+    }
+]

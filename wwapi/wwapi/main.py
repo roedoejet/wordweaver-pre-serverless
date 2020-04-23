@@ -3,13 +3,13 @@
 
 from fastapi import FastAPI
 
-from wwapi.router import affixes, conjugations, pronouns, tiers, verbs
+from wwapi.router import options, conjugations, pronouns, tiers, verbs
 
 # FastAPI specific code
 app = FastAPI()
 
 app.include_router(
-    affixes.router,
+    options.router,
     prefix='/api/v1'
 )
 
