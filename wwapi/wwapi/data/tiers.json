@@ -1,32 +1,42 @@
 [
     {
-        "name": "ww.tiers.display",
+        "name": "display",
         "separator": "",
         "position": 0,
-        "key": "value"
+        "key": "value",
+        "options": {
+            "language": "L1",
+            "showName": false
+        }
     },
     {
-        "name": "ww.tiers.breakdown",
+        "name": "breakdown",
         "separator": "-",
         "position": 1,
-        "key": "value"
+        "key": "value",
+        "options": {
+            "language": "L1",
+            "showName": false
+        }
     },
     {
-        "name": "ww.tiers.gloss",
+        "name": "gloss",
         "separator": "-",
         "position": 2,
-        "key": "gloss"
+        "key": "gloss",
+        "options": {
+            "language": "L1",
+            "showName": false
+        }
     },
     {
-        "name": "ww.tiers.breakdown-translation",
-        "separator": "-",
-        "position": 3,
-        "key": "english"
-    },
-    {
-        "name": "ww.tiers.translation",
+        "name": "translation",
         "separator": "",
         "position": 4,
-        "key": "english"
+        "key": "english",
+        "options": {
+            "language": "L2",
+            "showName": false
+        }
     }
 ]

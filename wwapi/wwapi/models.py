@@ -32,7 +32,7 @@ class Tier(BaseModel):
     separator: str = ''
     position: int = 0
     key: str = ''           # Must be key in ResponseMorpheme
-    options: Optional[TierOptions]
+    options: TierOptions
 
 
 class AffixOption(BaseModel):
