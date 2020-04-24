@@ -1,5 +1,6 @@
+from __future__ import annotations
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import Any, List, Optional, Union
 from enum import Enum
 
 
@@ -15,13 +16,6 @@ class Morpheme(BaseModel):
     position: int = 0
 
 
-class Affix(BaseModel):
-    tag: str = ''
-    gloss: str = ''
-    type: str = ''
-    morphemes: List[Morpheme]
-
-
 class TierOptions(BaseModel):
     language: str = 'L1'
     showName: bool = False
@@ -35,11 +29,11 @@ class Tier(BaseModel):
     options: TierOptions
 
 
-class AffixOption(BaseModel):
+class Option(BaseModel):
     ''' Required '''
     tag: str = ''
     gloss: str = ''
-    affixes: List[Affix]
+    classes: List[str]
 
 
 class Pronoun(BaseModel):
@@ -62,8 +56,7 @@ class Verb(BaseModel):
     display: str = ''
     gloss: str = ''
     tag: str = ''
-    required_affixes: List[Affix]
-    position: int = 0
+    classes: List[str] = []
 
 
 class ConjugationInput(BaseModel):
@@ -100,6 +93,40 @@ Conjugation = List[ResponseMorpheme]
 class ResponseObject(BaseModel):
     input: ConjugationInput
     output: Conjugation
+
+# Validation
+
+
+class Condition(BaseModel):
+    logic: Union[str, None]
+    conditions: Optional[Any]
+    method: Optional[str]
+    method_key: Optional[str]
+    item_key: Optional[str]
+    value: Optional[Union[str, List[str]]]
+    operator: Optional[str]
+
+
+Conditions = Union[bool, List[Condition]]
+
+
+class CategoryValidation(BaseModel):
+    verbs: Conditions
+    options: Conditions
+    agents: Conditions
+    patients: Conditions
+    conjugations: Optional[Conditions]
+
+
+class DisplayConditions(BaseModel):
+    categories: CategoryValidation
+
+class ValidationConditions(BaseModel):
+    selection: CategoryValidation
+
+class Validation(BaseModel):
+    display: DisplayConditions
+    validation: ValidationConditions
 
 
 Response = List[ResponseObject]

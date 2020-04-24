@@ -1,0 +1,139 @@
+{
+    "display": {
+        "categories": {
+            "verbs": true,
+            "options": true,
+            "agents": [
+                {
+                    "logic": null,
+                    "operator": "in",
+                    "method": "selection",
+                    "method_key": "root",
+                    "item_key": "thematic_relation",
+                    "value": [
+                        "red",
+                        "purple"
+                    ]
+                }
+            ],
+            "conjugations": true,
+            "patients": [
+                {
+                    "logic": null,
+                    "operator": "in",
+                    "method": "selection",
+                    "method_key": "root",
+                    "item_key": "thematic_relation",
+                    "value": [
+                        "blue",
+                        "purple"
+                    ]
+                }
+            ]
+        }
+    },
+    "validation": {
+        "selection": {
+            "agents": [
+                {
+                    "logic": "or",
+                    "conditions": [
+                        {
+                            "logic": "and",
+                            "conditions": [
+                                {
+                                    "logic": null,
+                                    "operator": "eq",
+                                    "method": "selection",
+                                    "method_key": "root",
+                                    "item_key": "thematic_relation",
+                                    "value": "red"
+                                },
+                                {
+                                    "logic": null,
+                                    "operator": "truthy",
+                                    "method": "selection",
+                                    "method_key": "agent",
+                                    "item_key": "",
+                                    "value": ""
+                                }
+                            ]
+                        },
+                        {
+                            "logic": "and",
+                            "conditions": [
+                                {
+                                    "logic": null,
+                                    "operator": "eq",
+                                    "method": "selection",
+                                    "method_key": "root",
+                                    "item_key": "thematic_relation",
+                                    "value": "purple"
+                                },
+                                {
+                                    "logic": null,
+                                    "operator": "truthy",
+                                    "method": "selection",
+                                    "method_key": "patient",
+                                    "item_key": "",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "options": true,
+            "patients": [
+                {
+                    "logic": "or",
+                    "conditions": [
+                        {
+                            "logic": "and",
+                            "conditions": [
+                                {
+                                    "logic": null,
+                                    "operator": "eq",
+                                    "method": "selection",
+                                    "method_key": "root",
+                                    "item_key": "thematic_relation",
+                                    "value": "blue"
+                                },
+                                {
+                                    "logic": null,
+                                    "operator": "truthy",
+                                    "method": "selection",
+                                    "method_key": "patient",
+                                    "item_key": "",
+                                    "value": ""
+                                }
+                            ]
+                        },
+                        {
+                            "logic": "and",
+                            "conditions": [
+                                {
+                                    "logic": null,
+                                    "operator": "eq",
+                                    "method": "selection",
+                                    "method_key": "root",
+                                    "item_key": "thematic_relation",
+                                    "value": "purple"
+                                },
+                                {
+                                    "logic": null,
+                                    "operator": "truthy",
+                                    "method": "selection",
+                                    "method_key": "agent",
+                                    "item_key": "",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "verbs": true
+        }
+    }
+}
