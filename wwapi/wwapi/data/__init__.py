@@ -15,3 +15,6 @@ with open(os.path.join(DATA_PATH, 'conjugations.json')) as f:
     CONJUGATION_DATA = json.load(f)
 with open(os.path.join(DATA_PATH, 'tiers.json')) as f:
     TIER_DATA = json.load(f)
+with open(os.path.join(DATA_PATH, 'validation.json')) as f:
+    print(f)
+    VALIDATION_DATA = json.load(f)

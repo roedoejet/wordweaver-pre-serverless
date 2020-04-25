@@ -2,78 +2,69 @@
     {
         "person": "1",
         "number": "SG",
-        "value": "je",
-        "gloss": "I",
-        "obj_gloss": "Me",
+        "gloss": "Je",
+        "obj_gloss": "Moi",
         "tag": "1-sg"
     },
     {
         "person": "2",
         "number": "SG",
-        "value": "tu",
-        "gloss": "You",
-        "obj_gloss": "You",
+        "gloss": "Tu",
+        "obj_gloss": "Toi",
         "tag": "2-sg"
     },
     {
         "person": "3",
         "number": "SG",
         "gender": "F",
-        "value": "elle",
-        "gloss": "She",
-        "obj_gloss": "Her",
+        "gloss": "Elle",
+        "obj_gloss": "Elle",
         "tag": "3-sg-f"
     },
     {
         "person": "3",
         "number": "SG",
         "gender": "M",
-        "value": "il",
-        "gloss": "He",
-        "obj_gloss": "Him",
+        "gloss": "Il",
+        "obj_gloss": "Lui",
         "tag": "3-sg-m"
     },
     {
         "person": "3",
         "number": "SG",
         "gender": "N",
-        "value": "on",
-        "gloss": "It",
-        "obj_gloss": "It",
+        "gloss": "On",
+        "obj_gloss": "Ça",
         "tag": "3-sg-n"
     },
     {
         "person": "1",
         "number": "PL",
-        "value": "nous",
-        "gloss": "We",
-        "obj_gloss": "Us",
+        "gloss": "Nous",
+        "obj_gloss": "Nous",
         "tag": "1-pl"
     },
     {
         "person": "2",
         "number": "PL",
-        "value": "vous",
-        "gloss": "You all",
-        "obj_gloss": "You all",
+        "gloss": "Vous",
+        "obj_gloss": "Vous",
         "tag": "2-pl"
     },
     {
         "person": "3",
         "number": "PL",
         "gender": "M",
-        "value": "ils",
-        "gloss": "They (male)",
-        "obj_gloss": "Them (male)",
+        "gloss": "Ils",
+        "obj_gloss": "Eux",
         "tag": "3-pl-m"
     },
     {
         "person": "3",
         "number": "PL",
         "gender": "F",
-        "value": "elles",
-        "gloss": "They (female)",
-        "obj_gloss": "Them (female)",
+        "gloss": "Elle",
+        "obj_gloss": "Elles",
         "tag": "3-pl-f"
     }
 ]

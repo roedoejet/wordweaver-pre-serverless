@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from wwapi.data import OPTION_DATA, CONJUGATION_DATA, VERB_DATA, PRONOUN_DATA, TIER_DATA
-from wwapi.models import Option, Pronoun, Verb, ResponseObject, Tier
+from wwapi.data import OPTION_DATA, CONJUGATION_DATA, VALIDATION_DATA, VERB_DATA, PRONOUN_DATA, TIER_DATA
+from wwapi.models import Option, Pronoun, Verb, ResponseObject, Tier, Validation
 import requests
 import json
 import couchdb
@@ -25,8 +25,7 @@ def validate():
         try:
             Option.validate(option)
         except ValidationError:
-            logger.error(ERROR.format('options', pformat(
-                option), pformat(Option.schema()['properties'])))
+            logger.error(ERROR.format('options', pformat(option), pformat(Option.schema()['properties'])))
             return
     # Check Pronouns
     logger.info(CHECKING.format(len(PRONOUN_DATA), 'pronouns'))
@@ -64,6 +63,12 @@ def validate():
             logger.error(ERROR.format('tiers', pformat(tier),
                                       pformat(Tier.schema()['properties'])))
             return
+    # Check Validation
+    try:
+        Validation.validate(VALIDATION_DATA)
+    except ValidationError:
+        logger.error(ERROR.format('validation', pformat(VALIDATION_DATA), pformat(Validation.schema()['properties'])))
+        return
     logger.info("Success! All data checked")
 
 
@@ -79,7 +84,7 @@ def initialize_db():
     if data_db in couchserver:
         del couchserver[data_db]
     db = couchserver.create(data_db)
-
+    
     for option in OPTION_DATA:
         option['data_type'] = 'option'
         db.save(option)
@@ -99,6 +104,10 @@ def initialize_db():
     for conjugation in CONJUGATION_DATA:
         conjugation['data_type'] = 'conjugation'
         db.save(conjugation)
+
+    VALIDATION_DATA['data_type'] = 'validation'
+    db.save(VALIDATION_DATA)
+
     logger.info("Success! All data initialized into Database")
 
 

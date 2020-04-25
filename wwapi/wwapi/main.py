@@ -3,7 +3,7 @@
 
 from fastapi import FastAPI
 
-from wwapi.router import options, conjugations, pronouns, tiers, verbs
+from wwapi.router import conjugations, options, pronouns, tiers, validation, verbs
 
 # FastAPI specific code
 app = FastAPI()
@@ -22,6 +22,12 @@ app.include_router(
     tiers.router,
     prefix='/api/v1'
 )
+
+app.include_router(
+    validation.router,
+    prefix='/api/v1'
+)
+
 
 app.include_router(
     verbs.router,
