@@ -1,1 +1,100 @@
-[{"tag": "habpres", "gloss": "Habitual (present)", "classes": ["aspect", "tmp_affix"]}, {"tag": "habfut", "gloss": "Habitual (future)", "classes": ["aspect", "tmp_affix", "post_aspectual_suffix"]}, {"tag": "habpast", "gloss": "Habitual (past)", "classes": ["aspect", "post_aspectual_suffix"]}, {"tag": "habcond", "gloss": "Habitual (conditional)", "classes": ["aspect", "tmp_affix", "post_aspectual_suffix"]}, {"tag": "command", "gloss": "Command", "classes": ["aspect", "tmp_affix"]}, {"tag": "defpast", "gloss": "Definite Past", "classes": ["aspect", "tmp_affix"]}, {"tag": "indef", "gloss": "Indefinite", "classes": ["aspect", "tmp_affix"]}, {"tag": "punctfut", "gloss": "Future (punctual)", "classes": ["aspect", "tmp_affix"]}, {"tag": "perfpres", "gloss": "Perfective (present)", "classes": ["aspect", "tmp_affix"]}, {"tag": "perfcond", "gloss": "Perfective (conditional)", "classes": ["aspect", "tmp_affix"]}, {"tag": "presprogr", "gloss": "Progressive (present)", "classes": ["aspect", "post_aspectual_suffix"]}, {"tag": "statepres", "gloss": "Stative (present)", "classes": ["aspect", "tmp_affix"]}]
+[
+    {
+        "tag": "habpres",
+        "gloss": "Habitual (present)",
+        "classes": [
+            "aspect",
+            "tmp_affix"
+        ]
+    },
+    {
+        "tag": "habfut",
+        "gloss": "Habitual (future)",
+        "classes": [
+            "aspect",
+            "tmp_affix",
+            "post_aspectual_suffix"
+        ]
+    },
+    {
+        "tag": "habpast",
+        "gloss": "Habitual (past)",
+        "classes": [
+            "aspect",
+            "post_aspectual_suffix"
+        ]
+    },
+    {
+        "tag": "habcond",
+        "gloss": "Habitual (conditional)",
+        "classes": [
+            "aspect",
+            "tmp_affix",
+            "post_aspectual_suffix"
+        ]
+    },
+    {
+        "tag": "command",
+        "gloss": "Command",
+        "classes": [
+            "aspect",
+            "tmp_affix"
+        ]
+    },
+    {
+        "tag": "defpast",
+        "gloss": "Definite Past",
+        "classes": [
+            "aspect",
+            "tmp_affix"
+        ]
+    },
+    {
+        "tag": "indef",
+        "gloss": "Indefinite",
+        "classes": [
+            "aspect",
+            "tmp_affix"
+        ]
+    },
+    {
+        "tag": "punctfut",
+        "gloss": "Future (punctual)",
+        "classes": [
+            "aspect",
+            "tmp_affix"
+        ]
+    },
+    {
+        "tag": "perfpres",
+        "gloss": "Perfective (present)",
+        "classes": [
+            "aspect",
+            "tmp_affix"
+        ]
+    },
+    {
+        "tag": "perfcond",
+        "gloss": "Perfective (conditional)",
+        "classes": [
+            "aspect",
+            "tmp_affix"
+        ]
+    },
+    {
+        "tag": "presprogr",
+        "gloss": "Progressive (present)",
+        "classes": [
+            "aspect",
+            "post_aspectual_suffix"
+        ]
+    },
+    {
+        "tag": "statepres",
+        "gloss": "Stative (present)",
+        "classes": [
+            "aspect",
+            "tmp_affix"
+        ]
+    }
+]

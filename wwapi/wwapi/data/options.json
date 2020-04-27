@@ -1,26 +1,46 @@
 [
     {
-        "tag": "present",
-        "gloss": "Pr\u00e9sent"
+        "tag": "conditionnel-present",
+        "gloss": "Conditionnel Pr\u00e9sent"
     },
     {
         "tag": "imperatif-present",
         "gloss": "Imperatif Pr\u00e9sent"
     },
     {
-        "tag": "futur",
-        "gloss": "Futur"
+        "tag": "indicatif-futur",
+        "gloss": "Indicatif Futur"
     },
     {
-        "tag": "imparfait",
-        "gloss": "Imparfait"
+        "tag": "indicatif-imparfait",
+        "gloss": "Indicatif Imparfait"
     },
     {
-        "tag": "passe-simple",
-        "gloss": "Pass\u00e9 Simple"
+        "tag": "indicatif-passe-simple",
+        "gloss": "Indicatif Pass\u00e9 Simple"
+    },
+    {
+        "tag": "indicatif-present",
+        "gloss": "Indicatif Pr\u00e9sent"
+    },
+    {
+        "tag": "infinitif-present",
+        "gloss": "Infinitif Pr\u00e9sent"
     },
     {
         "tag": "participe-passe",
         "gloss": "Participe Pass\u00e9"
+    },
+    {
+        "tag": "participe-present",
+        "gloss": "Participe Pr\u00e9sent"
+    },
+    {
+        "tag": "subjonctif-imparfait",
+        "gloss": "Subjonctif Imparfait"
+    },
+    {
+        "tag": "subjonctif-present",
+        "gloss": "Subjonctif Pr\u00e9sent"
     }
 ]

@@ -9,19 +9,6 @@ class Morpheme(BaseModel):
     position: int = 0
 
 
-class TierOptions(BaseModel):
-    language: str = 'L1'
-    showName: bool = False
-
-
-class Tier(BaseModel):
-    name: str = ''
-    separator: str = ''
-    position: int = 0
-    key: str = ''           # Must be key in ResponseMorpheme
-    options: TierOptions
-
-
 class Option(BaseModel):
     ''' Required '''
     gloss: str = ''
@@ -81,40 +68,6 @@ Conjugation = List[ResponseMorpheme]
 class ResponseObject(BaseModel):
     input: ConjugationInput
     output: Conjugation
-
-# Validation
-
-
-class Condition(BaseModel):
-    logic: Union[str, None]
-    conditions: Optional[Any]
-    method: Optional[str]
-    method_key: Optional[str]
-    item_key: Optional[str]
-    value: Optional[Union[str, List[str]]]
-    operator: Optional[str]
-
-
-Conditions = Union[bool, List[Condition]]
-
-
-class CategoryValidation(BaseModel):
-    verbs: Conditions
-    options: Conditions
-    agents: Conditions
-    patients: Conditions
-    conjugations: Optional[Conditions]
-
-
-class DisplayConditions(BaseModel):
-    categories: CategoryValidation
-
-class ValidationConditions(BaseModel):
-    selection: CategoryValidation
-
-class Validation(BaseModel):
-    display: DisplayConditions
-    validation: ValidationConditions
 
 
 Response = List[ResponseObject]
