@@ -7,16 +7,18 @@ import couchdb
 
 DATA_PATH = os.path.dirname(__file__)
 
-with open(os.path.join(DATA_PATH, 'options.json')) as f:
+LANG_CODE = "fr"
+
+with open(os.path.join(DATA_PATH, LANG_CODE, 'options.json')) as f:
     OPTION_DATA = json.load(f)
-with open(os.path.join(DATA_PATH, 'pronouns.json')) as f:
+with open(os.path.join(DATA_PATH, LANG_CODE, 'pronouns.json')) as f:
     PRONOUN_DATA = json.load(f)
-with open(os.path.join(DATA_PATH, 'verbs.json')) as f:
+with open(os.path.join(DATA_PATH, LANG_CODE, 'verbs.json')) as f:
     VERB_DATA = json.load(f)
-with open(os.path.join(DATA_PATH, 'conjugations.json')) as f:
+with open(os.path.join(DATA_PATH, LANG_CODE, 'conjugations.json')) as f:
     CONJUGATION_DATA = json.load(f)
 
-USER = 'admin'
-PASSWORD = 'password'
+USER = os.environ['COUCHDB_USER']
+PASSWORD = os.environ['COUCHDB_PASSWORD']
 COUCHSERVER = couchdb.Server('http://%s:%s@db:5984' % (USER, PASSWORD))
 URL = f'http://{USER}:{PASSWORD}@db:5984'

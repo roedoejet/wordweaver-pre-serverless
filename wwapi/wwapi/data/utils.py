@@ -77,8 +77,9 @@ def initialize_db():
         db.update(db_data[db_name])
         # Initialize view by tag
         if db_name in [verb_db, pronoun_db, option_db]:
+            # Add indices for tags
             headers = {'Content-type': 'application/json'}
-            url = f'http://admin:password@db:5984/{db_name}/_index'
+            url = f'http://{USER}:{PASSWORD}@db:5984/{db_name}/_index'
             index = {
                 "index": {
                     "fields": [
@@ -90,8 +91,9 @@ def initialize_db():
             }
             requests.post(url, data=json.dumps(index), headers=headers)
         elif db_name == data_db:
+            # Add indices for root by default
             headers = {'Content-type': 'application/json'}
-            url = f'http://admin:password@db:5984/{db_name}/_index'
+            url = f'http://{USER}:{PASSWORD}@db:5984/{db_name}/_index'
             index = {
                 "index": {
                     "fields": [
@@ -103,7 +105,7 @@ def initialize_db():
             }
             requests.post(url, data=json.dumps(index), headers=headers)
 
-    logger.info("Success! All data initialized into Database")
+    logger.info("Success! All data initialized into CouchDB Database")
 
 
 if __name__ == '__main__':

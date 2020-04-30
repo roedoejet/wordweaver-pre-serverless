@@ -25,4 +25,7 @@ services:
             - start_dependencies
         volumes:
             - ./wwapi:/app
+        environment:
+            COUCHDB_USER: admin
+            COUCHDB_PASSWORD: password
         
