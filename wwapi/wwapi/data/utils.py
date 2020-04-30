@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
-from wwapi.data import OPTION_DATA, CONJUGATION_DATA, VERB_DATA, PRONOUN_DATA
+from wwapi.data import OPTION_DATA, CONJUGATION_DATA, VERB_DATA, PRONOUN_DATA, USER, PASSWORD, COUCHSERVER
 from wwapi.models import Option, Pronoun, Verb, ResponseObject
-import requests
-import json
-import couchdb
 from tqdm import tqdm
 from loguru import logger
 from pydantic.error_wrappers import ValidationError
 from pprint import pformat
 import sys
+import requests
+import json
 
 fmt = "\n <level>WordWeaver</level> | <green>{function}</green> | {message} \n"
 logger.remove()
@@ -61,41 +60,50 @@ def validate():
 def initialize_db():
     validate()
 
-    user = 'admin'
-    password = 'password'
-    couchserver = couchdb.Server("http://%s:%s@db:5984/" % (user, password))
-
     data_db = 'data'
-    logger.warning(f"Deleting {data_db} database")
-    if data_db in couchserver:
-        del couchserver[data_db]
-    db = couchserver.create(data_db)
-
-    for option in OPTION_DATA:
-        option['data_type'] = 'option'
-        db.save(option)
-
-    for pronoun in PRONOUN_DATA:
-        pronoun['data_type'] = 'pronoun'
-        db.save(pronoun)
-
-    for verb in VERB_DATA:
-        verb['data_type'] = 'verb'
-        db.save(verb)
-
-    for conjugation in CONJUGATION_DATA:
-        conjugation['data_type'] = 'conjugation'
-        db.save(conjugation)
+    verb_db = 'verb'
+    pronoun_db = 'pronoun'
+    option_db = 'option'
+    dbs = [data_db, verb_db, pronoun_db, option_db]
+    db_data = {data_db: CONJUGATION_DATA, verb_db: VERB_DATA,
+               pronoun_db: PRONOUN_DATA, option_db: OPTION_DATA}
+    for db_name in dbs:
+        logger.warning(f"Deleting {db_name} database")
+        # Start fresh, delete old data
+        if db_name in COUCHSERVER:
+            del COUCHSERVER[db_name]
+        db = COUCHSERVER.create(db_name)
+        # Bulk upload docs
+        db.update(db_data[db_name])
+        # Initialize view by tag
+        if db_name in [verb_db, pronoun_db, option_db]:
+            headers = {'Content-type': 'application/json'}
+            url = f'http://admin:password@db:5984/{db_name}/_index'
+            index = {
+                "index": {
+                    "fields": [
+                        "tag"
+                    ]
+                },
+                "name": "tag-json-index",
+                "type": "json"
+            }
+            requests.post(url, data=json.dumps(index), headers=headers)
+        elif db_name == data_db:
+            headers = {'Content-type': 'application/json'}
+            url = f'http://admin:password@db:5984/{db_name}/_index'
+            index = {
+                "index": {
+                    "fields": [
+                        "input.root"
+                    ]
+                },
+                "name": "tag-json-index",
+                "type": "json"
+            }
+            requests.post(url, data=json.dumps(index), headers=headers)
 
     logger.info("Success! All data initialized into Database")
-
-
-def find(selector):
-    headers = {'Content-type': 'application/json'}
-    url = 'http://admin:password@db:5984/data/_find'
-    response = requests.post(url, data=json.dumps(
-        {'selector': selector}), headers=headers)
-    return response.json()
 
 
 if __name__ == '__main__':

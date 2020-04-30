@@ -3,37 +3,55 @@
 
 from typing import List
 
-from fastapi import APIRouter, Query, HTTPException
+from fastapi import APIRouter, Query, HTTPException, Response as FAResponse
 
 from wwapi.models import Response
 
-from wwapi.data.utils import find
+from wwapi.router.utils import find
 
 router = APIRouter()
 
+DB_NAME = 'data'
 
-def create_selector(option, agent, patient):
-    return {'option': option, }
+
+def return_selector(arg):
+    if not arg:
+        return False
+    if len(arg) == 1:
+        return arg[0]
+    else:
+        return {"$in": arg}
 
 
 @router.get("/conjugations", response_model=Response, tags=["conjugations"])
-def read_conjugations(root: List[str] = Query(None), option: List[str] = Query(None),
+def read_conjugations(response: FAResponse, root: List[str] = Query(None), option: List[str] = Query(None),
                       agent: List[str] = Query(None), patient: List[str] = Query(None)) -> Response:
-    input_selector = {}
-    if root:
-        input_selector['root'] = {'$in': root}
-    if option:
-        input_selector['option'] = {'$in': option}
-    if agent:
-        input_selector['agent'] = {'$in': agent}
-    if patient:
-        input_selector['patient'] = {'$in': patient}
-    if root or option or agent or patient:
-        selector = {'data_type': 'conjugation', 'input': input_selector}
+    selector = {}
+    agent = return_selector(agent)
+    patient = return_selector(patient)
+    option = return_selector(option)
+    conjugations = []
+    # Queries have to be joined because for some un-relaxing reason, 
+    # CouchDB queries with $in or $or do not actually use indices
+    if root and len(root) > 1:
+        for root_tag in root:
+            selector['input.root'] = root_tag
+            if option:
+                selector['input.option'] = option
+            if agent:
+                selector['input.agent'] = agent
+            if patient:
+                selector['input.patient'] = patient
+            conjugations += find(DB_NAME, selector)['docs']
     else:
-        selector = {'data_type': 'conjugation'}
-    conjugations = find(selector)
-    if conjugations['docs']:
-        return conjugations['docs']
-    else:
-        raise HTTPException(status_code=404, detail="Your search returned no results")
+        root = return_selector(root)
+        if root:
+            selector['input.root'] = root
+        if option:
+            selector['input.option'] = option
+        if agent:
+            selector['input.agent'] = agent
+        if patient:
+            selector['input.patient'] = patient
+        conjugations = find(DB_NAME, selector)['docs']
+    return conjugations
