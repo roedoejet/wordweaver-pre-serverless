@@ -1,4 +1,5 @@
 import click
+import os
 
 from loguru import logger
 from wwapi.data.utils import initialize_db, validate

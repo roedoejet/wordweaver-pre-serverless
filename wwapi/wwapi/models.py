@@ -1,73 +1,17 @@
-from __future__ import annotations
-from pydantic import BaseModel
-from typing import Any, List, Optional, Union
-from enum import Enum
+import os
+from wwapi.data import __file__ as DATAROOT
+from importlib import import_module
+from wwapi.log import logger
 
+DATA_DIR = os.path.dirname(DATAROOT)
+WWLANG = os.environ['WWLANG']
 
-class Morpheme(BaseModel):
-    value: str = ''
-    position: int = 0
-
-
-class Option(BaseModel):
-    ''' Required '''
-    gloss: str = ''
-    tag: str = ''
-
-
-class Pronoun(BaseModel):
-    ''' Required '''
-    person: str = ''
-    number: str = ''
-    gender: str = ''
-    inclusivity: str = ''
-    role: str = ''
-    gloss: str = ''
-    obj_gloss: str = ''
-    position: int = 0
-    tag: str = ''
-
-
-class Verb(BaseModel):
-    ''' Required '''
-    gloss: str = ''
-    tag: str = ''
-    classes: List[str] = []
-
-
-class ConjugationInput(BaseModel):
-    root: str
-    option: str
-    agent: Union[List[str], str]
-
-
-class OptionalParam(BaseModel):
-    param: str
-    value: str
-
-
-class RequestParams(BaseModel):
-    root: List[str]
-    option: List[str]
-    agent: List[str]
-    patient: List[str]
-    optional: Optional[List[OptionalParam]]
-
-
-class ResponseMorpheme(BaseModel):
-    position: Optional[int]
-    value: Optional[str]
-    gloss: Optional[str]
-    english: Optional[str]
-    type: Optional[List[str]]
-
-
-Conjugation = List[ResponseMorpheme]
-
-
-class ResponseObject(BaseModel):
-    input: ConjugationInput
-    output: Conjugation
-
-
-Response = List[ResponseObject]
+if os.path.exists(os.path.join(DATA_DIR, os.environ['WWLANG'])):
+    module = import_module(f'wwapi.data.{WWLANG}.models')
+    Option = module.Option
+    Pronoun = module.Pronoun
+    Verb = module.Verb
+    Response = module.Response
+    ResponseObject = module.ResponseObject
+else:
+    logger.error(f"Can't find '{WWLANG}', are you sure you 'WWLANG' is defined in your environment?")
