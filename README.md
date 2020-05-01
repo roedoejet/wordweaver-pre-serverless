@@ -52,6 +52,8 @@ This project is the outcome of an idea from Owennatékha Brian Maracle to create
     * Then, to run your local version, `docker-compose up`
     * You can stop the service by running `docker-compose down`
     * Then, visit `http://localhost:5200/docs` to see the details of using your API.
+    * Change the `WWLANG` environment variable in `docker-compose.yml` to the name of your language folder
+  
 3. Head over to **wordweaver-UI** repo and configure that for usage with this API.
 
 ## Usage
