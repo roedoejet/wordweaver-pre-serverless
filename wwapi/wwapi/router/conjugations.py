@@ -33,7 +33,7 @@ def read_conjugations(response: FAResponse, root: List[str] = Query(None), optio
     conjugations = []
     # Queries have to be joined because for some un-relaxing reason,
     # CouchDB queries with $in or $or do not actually use indices
-    if root and len(root) > 1:
+    if root:
         for root_tag in root:
             selector['input.root'] = root_tag
             if option:
@@ -43,15 +43,4 @@ def read_conjugations(response: FAResponse, root: List[str] = Query(None), optio
             if patient:
                 selector['input.patient'] = patient
             conjugations += find(DB_NAME, selector)['docs']
-    else:
-        root = return_selector(root)
-        if root:
-            selector['input.root'] = root
-        if option:
-            selector['input.option'] = option
-        if agent:
-            selector['input.agent'] = agent
-        if patient:
-            selector['input.patient'] = patient
-        conjugations = find(DB_NAME, selector)['docs']
     return conjugations
