@@ -1,5 +1,4 @@
 version: '3'
-restart: always
 services:
     start_dependencies:
         image: dadarek/wait-for-dependencies
@@ -17,7 +16,7 @@ services:
         image: roedoejet/wordweaver
         command: 'bash -c "wwapi init && uvicorn --reload --host 0.0.0.0 --port 5200 --log-level info wwapi.main:app"'
         ports:
-            - "5200:$PORT"
+            - "$PORT:5200"
         depends_on:
             - start_dependencies
         environment:
