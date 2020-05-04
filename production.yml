@@ -1,4 +1,5 @@
 version: '3'
+restart: always
 services:
     start_dependencies:
         image: dadarek/wait-for-dependencies
@@ -6,25 +7,19 @@ services:
           - db
         command: db:5984
     db:        
-        build: '.'
-        volumes: 
-            - ./etc:/opt/couchdb/etc/local.d  
-            - ./data:/opt/couchdb/data
-            - ./log:/opt/couchdb/var/log
+        image: roedoejet/wordweaver-db
         ports:
             - "5984:5984"
         environment:
             COUCHDB_USER: admin
             COUCHDB_PASSWORD: password
     web:
-        build: './wwapi'
-        command: 'bash -c "wwapi init && uvicorn --reload --host 0.0.0.0 --port 5200 --log-level debug wwapi.main:app"'
+        image: roedoejet/wordweaver
+        command: 'bash -c "wwapi init && uvicorn --reload --host 0.0.0.0 --port 5200 --log-level info wwapi.main:app"'
         ports:
-            - "5200:5200"
+            - "5200:$PORT"
         depends_on:
             - start_dependencies
-        volumes:
-            - ./wwapi:/app
         environment:
             COUCHDB_USER: admin
             COUCHDB_PASSWORD: password
