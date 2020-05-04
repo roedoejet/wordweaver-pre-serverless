@@ -7,6 +7,7 @@ services:
         command: db:5984
     db:        
         build: '.'
+        image: roedoejet/wordweaver-db
         volumes: 
             - ./etc:/opt/couchdb/etc/local.d  
             - ./data:/opt/couchdb/data
@@ -18,6 +19,7 @@ services:
             COUCHDB_PASSWORD: password
     web:
         build: './wwapi'
+        image: roedoejet/wordweaver
         command: 'bash -c "wwapi init && uvicorn --reload --host 0.0.0.0 --port 5200 --log-level debug wwapi.main:app"'
         ports:
             - "5200:5200"
