@@ -18,6 +18,7 @@
   - [Background](#background)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
+  - [Deployment](#deployment)
   - [Usage](#usage)
   - [Maintainers](#maintainers)
   - [Contributing](#contributing)
@@ -55,6 +56,26 @@ This project is the outcome of an idea from Owennatékha Brian Maracle to create
     * Change the `WWLANG` environment variable in `docker-compose.yml` to the name of your language folder
   
 3. Head over to **wordweaver-UI** repo and configure that for usage with this API.
+
+## Deployment
+
+The following are instructions for deploying using [Dokku](http://dokku.viewdocs.io/dokku/) on a VPS (Virtual Private Server) service like [Linode](https://www.linode.com/). 
+
+1. Make sure you have a [public ssh key](https://www.linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/)
+2. Make sure your VPS is supported with Dokku
+3. Login to your VPS
+4. Download Dokku and bootstrap it:
+
+```bash
+
+wget https://raw.githubusercontent.com/dokku/dokku/v0.20.4/bootstrap.sh
+sudo DOKKU_TAG=v0.20.4 bash bootstrap.sh
+
+```
+
+5. Go to your VPS public IP address and finalize the ssh-key configuration
+6. On your VPS, add the app `dokku apps:create ruby-getting-started`
+7. 
 
 ## Usage
 

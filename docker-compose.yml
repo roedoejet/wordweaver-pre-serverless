@@ -28,5 +28,5 @@ services:
         environment:
             COUCHDB_USER: admin
             COUCHDB_PASSWORD: password
-            WWLANG: fr
+            WWLANG: moh
         
