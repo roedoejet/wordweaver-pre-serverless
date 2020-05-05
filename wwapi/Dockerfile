@@ -8,6 +8,8 @@ COPY ./ /app
 
 RUN pip install -e /app
 
+EXPOSE 5200
+
 # Prod
 # CMD ["uvicorn", "wwapi.main:app", "--host", "$HOST", "--port", "$PORT"]
 # Dev

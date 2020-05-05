@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  db:
+    ports:
+      - '5984:5984'
+  proxy:
+    ports:
+      - '80:5200'
+      - '8090:8080'
+  web:
+    ports:
+      - '5200:5200'

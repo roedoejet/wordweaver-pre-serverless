@@ -1,0 +1,6 @@
+version: '3.3'
+services:
+  db:
+    image: '${DOCKER_IMAGE_DB}:${TAG-latest}'
+  web:
+    image: '${DOCKER_IMAGE_WEB}:${TAG-latest}'

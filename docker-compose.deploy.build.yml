@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  db:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+  web:
+    build:
+      context: ./wwapi
+      dockerfile: Dockerfile
+

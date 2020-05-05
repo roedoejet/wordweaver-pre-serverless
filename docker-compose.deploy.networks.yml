@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  db:
+    networks:
+      - ${TRAEFIK_PUBLIC_NETWORK}
+      - default
+  proxy:
+    networks:
+      - ${TRAEFIK_PUBLIC_NETWORK}
+      - default
+  web:
+    networks:
+      - ${TRAEFIK_PUBLIC_NETWORK}
+      - default
+
+networks:
+  traefik-public:
+    external: true
