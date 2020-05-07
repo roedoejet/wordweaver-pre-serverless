@@ -26,11 +26,11 @@ services:
         - traefik.frontend.redirect.entryPoint=https
         # Uncomment the config line below to detect and redirect www to non-www (or the contrary)
         # The lines above for traefik.frontend.rule are needed too
-        # - "traefik.frontend.redirect.regex=^https?://(www.)?(${DOMAIN})/(.*)"
+        - "traefik.frontend.redirect.regex=^https?://(www.)?(${DOMAIN})/(.*)"
         # To redirect from non-www to www un-comment the line below
         # - "traefik.frontend.redirect.replacement=https://www.${DOMAIN}/$$3"
         # To redirect from www to non-www un-comment the line below
-        # - "traefik.frontend.redirect.replacement=https://${DOMAIN}/$$3"
+        - "traefik.frontend.redirect.replacement=https://${DOMAIN}/$$3"
   backend:
     deploy:
       labels:
