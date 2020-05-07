@@ -18,7 +18,7 @@
   - [Background](#background)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
-  - [Deployment](#deployment)
+  - [Local Development & Deployment](#local-development--deployment)
   - [Usage](#usage)
   - [Maintainers](#maintainers)
   - [Contributing](#contributing)
@@ -57,8 +57,15 @@ This project is the outcome of an idea from Owennatékha Brian Maracle to create
   
 3. Head over to **wordweaver-UI** repo and configure that for usage with this API.
 
-## Deployment
+## Local Development & Deployment
 
+The following instructions are for deploying using docker compose. Note that this will run your container on a single node. If you want to scale up your application (congrats, you're getting a lot of traffic), then edit the files labelled  `docker-compose.deploy.*.yml` to run your app on a Docker Swarm cluster.
+
+To run locally and deploy a basic service, you must have Docker installed, and then follow the steps from above:
+
+* Once the validation passes, go back to the root and run `docker-compose build`
+* Then, to run your local version, `docker-compose up`
+* You can stop the service by running `docker-compose down`
 
 ## Usage
 
