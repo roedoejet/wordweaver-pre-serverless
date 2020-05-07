@@ -1,14 +1,10 @@
 version: '3.3'
 services:
-  db:
+  couchdb:
     networks:
       - ${TRAEFIK_PUBLIC_NETWORK}
       - default
   proxy:
-    networks:
-      - ${TRAEFIK_PUBLIC_NETWORK}
-      - default
-  web:
     networks:
       - ${TRAEFIK_PUBLIC_NETWORK}
       - default

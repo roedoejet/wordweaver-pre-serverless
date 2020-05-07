@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from wwapi.data import OPTION_DATA, CONJUGATION_DATA, VERB_DATA, PRONOUN_DATA, USER, PASSWORD, COUCHSERVER
+from wwapi.data import OPTION_DATA, CONJUGATION_DATA, VERB_DATA, PRONOUN_DATA, USER, PASSWORD, COUCHSERVER, URL
 from wwapi.models import Option, Pronoun, Verb, ResponseObject
 from tqdm import tqdm
 from loguru import logger
@@ -79,7 +79,7 @@ def initialize_db():
         if db_name in [verb_db, pronoun_db, option_db]:
             # Add indices for tags
             headers = {'Content-type': 'application/json'}
-            url = f'http://{USER}:{PASSWORD}@db:5984/{db_name}/_index'
+            url = f'{URL}/{db_name}/_index'
             index = {
                 "index": {
                     "fields": [
@@ -93,7 +93,7 @@ def initialize_db():
         elif db_name == data_db:
             # Add indices for root by default
             headers = {'Content-type': 'application/json'}
-            url = f'http://{USER}:{PASSWORD}@db:5984/{db_name}/_index'
+            url = f'{URL}/{db_name}/_index'
             index = {
                 "index": {
                     "fields": [

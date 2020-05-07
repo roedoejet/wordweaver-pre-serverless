@@ -1,5 +1,8 @@
 version: '3.3'
 services:
-  web:
+  backend:
     volumes:
-      - ./wwapi:/app
+      - ./wwapi/wwapi:/app/wwapi
+  couchdb:
+    volumes:
+      - ./local.ini:/opt/couchdb/etc/local.ini

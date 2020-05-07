@@ -1,6 +1,4 @@
 requests
-fastapi>=0.16.0
-uvicorn
 couchdb
 loguru
 tqdm

@@ -1,8 +1,9 @@
 version: '3.3'
 services:
-  start_dependencies:
+  backend:
     depends_on: 
-      - db
-  web:
-    depends_on: 
-      - start_dependencies
+      - couchdb
+  # sync-gateway:
+  #   depends_on:
+  #     - couchdb
+  #     - backend

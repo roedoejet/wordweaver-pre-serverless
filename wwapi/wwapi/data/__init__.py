@@ -21,5 +21,5 @@ with open(os.path.join(DATA_PATH, WWLANG, 'conjugations.json')) as f:
 
 USER = os.environ.get('COUCHDB_USER', '')
 PASSWORD = os.environ.get('COUCHDB_PASSWORD', '')
-COUCHSERVER = couchdb.Server('http://%s:%s@db:5984' % (USER, PASSWORD))
-URL = f'http://{USER}:{PASSWORD}@db:5984'
+COUCHSERVER = couchdb.Server('http://%s:%s@couchdb:5984' % (USER, PASSWORD))
+URL = f'http://{USER}:{PASSWORD}@couchdb:5984'

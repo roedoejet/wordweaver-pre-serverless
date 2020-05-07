@@ -20,54 +20,57 @@ services:
             - env-couch.env
         networks:
             - backend
-    traefik:
-        image: traefik:v2.2
-        restart: always
-        labels:
-            - traefik.frontend.rule=Host:${DOMAIN}
-            - traefik.enable=true
-            - traefik.port=80
-        ports:
-            - "80:80"
-            - "8080:8080"
-            - "443:443"
-        volumes:
-            # - ./letsencrypt:/letsencrypt # <== Volume for certs (TLS)
-            - /var/run/docker.sock:/var/run/docker.sock # <== Volume for docker admin
-        networks:
-            - web
-        command:
-            - --api.insecure=true
-            - --api.dashboard=true
-            - --api.debug=true
-            - --log.level=DEBUG
-            - --providers.docker=true
-            - --providers.docker.exposedbydefault=false
-            - --providers.docker.network=web
-            - --entrypoints.web.address=:80
-            - --entrypoints.web-secured.address=:443
-    # proxy:
-    #     command: -- docker \
-    #         --docker.swarmmode \
-    #         --docker.watch \
-    #         --docker.exposedbydefault=false \
-    #         --constraints=tag=${TRAEFIK_TAG} \
-    #         --logLevel=Info \
-    #         --accessLog \
-    #         --web
+    # traefik:
+    #     image: traefik:v2.2
+    #     restart: always
+    #     env_file:
+    #         - env-main.env
+    #     labels:
+    #         - traefik.frontend.rule=Host:monitor.${DOMAIN}
+    #         - traefik.enable=true
+    #         - traefik.port=8080
+    #     ports:
+    #         - "80:80"
+    #         - "443:443"
+    #     volumes:
+    #         # - ./letsencrypt:/letsencrypt # <== Volume for certs (TLS)
+    #         - /var/run/docker.sock:/var/run/docker.sock # <== Volume for docker admin
+    #     networks:
+    #         - web
+    #     command:
+    #         - --api.insecure=true
+    #         - --api.dashboard=true
+    #         - --api.debug=true
+    #         - --log.level=DEBUG
+    #         - --providers.docker=true
+    #         - --providers.docker.exposedbydefault=false
+    #         - --providers.docker.network=web
+    #         - --entrypoints.web.address=:80
+    #         - --entrypoints.web-secured.address=:443
+    proxy:
+        env_file:
+            - env-main.env
+        command: -- docker \
+            --docker.swarmmode \
+            --docker.watch \
+            --docker.exposedbydefault=false \
+            --constraints=tag=${TRAEFIK_TAG} \
+            --logLevel=Info \
+            --accessLog \
+            --web
     web:
         restart: always
         build:
             context: ./wwapi
             dockerfile: Dockerfile
-        command: 'bash -c "wwapi init && uvicorn --reload --host 0.0.0.0 --port 5200 --log-level info wwapi.main:app"'
+        command: 'bash -c "wwapi init && uvicorn --reload --host 0.0.0.0 --port 80 --log-level info wwapi.main:app"'
         labels:
             - traefik.frontend.rule=PathPrefix:/api,/docs,/redoc
             - traefik.enable=true
             - traefik.port=80
             - traefik.tags=${TRAEFIK_TAG}
         ports:
-            - "5200:5200"
+            - "8080:80"
         # depends_on:
         #     - start_dependencies
         env_file:

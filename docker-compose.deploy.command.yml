@@ -9,5 +9,3 @@ services:
       --logLevel=INFO \
       --accessLog \
       --web
-    web:
-      command: 'bash -c "wwapi init && uvicorn --reload --host 0.0.0.0 --port 5200 --log-level info wwapi.main:app"'

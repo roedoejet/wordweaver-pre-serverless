@@ -1,16 +1,8 @@
-FROM python:3.7
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.6
 
 COPY ./requirements.txt /app/requirements.txt
+COPY ./setup.py /app/setup.py
 
-RUN pip install -r /app/requirements.txt
+COPY ./wwapi /app/wwapi
 
-COPY ./ /app
-
-RUN pip install -e /app
-
-EXPOSE 5200
-
-# Prod
-# CMD ["uvicorn", "wwapi.main:app", "--host", "$HOST", "--port", "$PORT"]
-# Dev
-# CMD ["uvicorn", "--reload", "--host", "0.0.0.0", "--port", "5200", "--log-level", "debug", "wwapi.main:app"]
+RUN pip install -e /app/

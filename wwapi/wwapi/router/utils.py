@@ -1,4 +1,4 @@
-from wwapi.data import COUCHSERVER, USER, PASSWORD
+from wwapi.data import COUCHSERVER, USER, PASSWORD, URL
 import json
 import requests
 
@@ -6,6 +6,6 @@ import requests
 def find(db_name, selector):
     # This needs to be updated in the router
     headers = {'Content-type': 'application/json'}
-    url = f'http://{USER}:{PASSWORD}@db:5984/{db_name}/_find'
+    url = f'{URL}/{db_name}/_find'
     response = requests.post(url, data=json.dumps({'selector': selector}), headers=headers)
     return response.json()

@@ -1,16 +1,24 @@
 version: '3.3'
 services:
-  db:
+  couchdb:
     volumes:
       - ./etc:/opt/couchdb/etc/local.d  
       - ./data:/opt/couchdb/data
       - ./log:/opt/couchdb/var/log
+      - ./local.ini:/opt/couchdb/etc/local.ini
     deploy:
       placement:
         constraints:
-          - node.labels.${STACK_NAME}.app-couchbase-data == true
+          - node.labels.${STACK_NAME}.couchdb == true
+          - node.labels.${STACK_NAME}.data == true
+          - node.labels.${STACK_NAME}.log == true
   proxy:
     deploy:
       placement:
         constraints:
           - node.role == manager
+
+volumes:
+  etc:
+  data:
+  log:

@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  db:
+  couchdb:
     deploy:
       labels:
         - traefik.frontend.rule=Host:db.${DOMAIN}
@@ -31,7 +31,7 @@ services:
         # - "traefik.frontend.redirect.replacement=https://www.${DOMAIN}/$$3"
         # To redirect from www to non-www un-comment the line below
         # - "traefik.frontend.redirect.replacement=https://${DOMAIN}/$$3"
-  web:
+  backend:
     deploy:
       labels:
         - traefik.frontend.rule=PathPrefix:/api,/docs,/redoc

@@ -5,9 +5,15 @@ services:
       - traefik.frontend.rule=Host:${DOMAIN}
       - traefik.enable=true
       - traefik.port=80
-  web:
+  backend:
     labels:
       - traefik.frontend.rule=PathPrefix:/api,/docs,/redoc
       - traefik.enable=true
       - traefik.port=80
       - traefik.tags=${TRAEFIK_TAG}
+  # frontend:
+  #   labels:
+  #     - traefik.frontend.rule=PathPrefix:/
+  #     - traefik.enable=true
+  #     - traefik.port=80
+  #     - traefik.tags=${TRAEFIK_TAG}
