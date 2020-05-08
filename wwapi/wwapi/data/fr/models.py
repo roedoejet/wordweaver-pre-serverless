@@ -1,4 +1,3 @@
-from __future__ import annotations
 from pydantic import BaseModel
 from typing import Any, List, Optional, Union
 from enum import Enum
@@ -13,6 +12,7 @@ class Option(BaseModel):
     ''' Required '''
     gloss: str = ''
     tag: str = ''
+    type: str = ''
 
 class Pronoun(BaseModel):
     ''' Required '''

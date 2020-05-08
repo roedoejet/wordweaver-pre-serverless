@@ -1,46 +1,57 @@
 [
     {
-        "tag": "conditionnel-present",
-        "gloss": "Conditionnel Pr\u00e9sent"
-    },
-    {
-        "tag": "imperatif-present",
-        "gloss": "Imperatif Pr\u00e9sent"
-    },
-    {
-        "tag": "indicatif-futur",
-        "gloss": "Indicatif Futur"
+        "tag": "indicatif-present",
+        "gloss": "Pr\u00e9sent",
+        "type": "Indicatif"
     },
     {
         "tag": "indicatif-imparfait",
-        "gloss": "Indicatif Imparfait"
+        "gloss": "Imparfait",
+        "type": "Indicatif"
     },
     {
         "tag": "indicatif-passe-simple",
-        "gloss": "Indicatif Pass\u00e9 Simple"
+        "gloss": "Pass\u00e9 Simple",
+        "type": "Indicatif"
     },
     {
-        "tag": "indicatif-present",
-        "gloss": "Indicatif Pr\u00e9sent"
-    },
-    {
-        "tag": "infinitif-present",
-        "gloss": "Infinitif Pr\u00e9sent"
-    },
-    {
-        "tag": "participe-passe",
-        "gloss": "Participe Pass\u00e9"
-    },
-    {
-        "tag": "participe-present",
-        "gloss": "Participe Pr\u00e9sent"
-    },
-    {
-        "tag": "subjonctif-imparfait",
-        "gloss": "Subjonctif Imparfait"
+        "tag": "indicatif-futur",
+        "gloss": "Futur",
+        "type": "Indicatif"
     },
     {
         "tag": "subjonctif-present",
-        "gloss": "Subjonctif Pr\u00e9sent"
+        "gloss": "Pr\u00e9sent",
+        "type": "Subjonctif"
+    },
+    {
+        "tag": "subjonctif-imparfait",
+        "gloss": "Imparfait",
+        "type": "Subjonctif"
+    },
+    {
+        "tag": "conditionnel-present",
+        "gloss": "Pr\u00e9sent",
+        "type": "Conditionnel"
+    },
+    {
+        "tag": "imperatif-present",
+        "gloss": "Pr\u00e9sent",
+        "type": "Imperatif"
+    },
+    {
+        "tag": "infinitif-present",
+        "gloss": "Infinitif Pr\u00e9sent",
+        "type": "Infinitif"
+    },
+    {
+        "tag": "participe-present",
+        "gloss": "Pr\u00e9sent",
+        "type": "Participe"
+    },
+    {
+        "tag": "participe-passe",
+        "gloss": "Pass\u00e9",
+        "type": "Participe"
     }
 ]

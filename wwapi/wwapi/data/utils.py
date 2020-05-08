@@ -59,7 +59,7 @@ def validate():
 
 def initialize_db():
     validate()
-
+    UPDATE_LIMIT = 10000
     data_db = 'data'
     verb_db = 'verb'
     pronoun_db = 'pronoun'
@@ -68,29 +68,42 @@ def initialize_db():
     db_data = {data_db: CONJUGATION_DATA, verb_db: VERB_DATA,
                pronoun_db: PRONOUN_DATA, option_db: OPTION_DATA}
     for db_name in dbs:
-        logger.warning(f"Deleting {db_name} database")
+        logger.warning(f"Deleting '{db_name}' database")
         # Start fresh, delete old data
         if db_name in COUCHSERVER:
             del COUCHSERVER[db_name]
         db = COUCHSERVER.create(db_name)
         # Bulk upload docs
-        db.update(db_data[db_name])
+        if len(db_data[db_name]) > UPDATE_LIMIT:
+            data_length = len(db_data[db_name])
+            logger.info(f"Whoa, you've got a lot of data here, we're going to have to split it up. This might take a while.")
+            counter = 1
+            while (counter * UPDATE_LIMIT) < data_length:
+                start = (counter - 1) * UPDATE_LIMIT
+                end = counter * UPDATE_LIMIT
+                logger.info(f"Adding documents from {start} to {end} to '{db_name}' database")
+                db.update(db_data[db_name][start:end])
+                counter += 1
+            logger.info(f"Adding documents from {end} to {data_length} to '{db_name}' database")
+            db.update(db_data[db_name][end:])
+        else:
+            db.update(db_data[db_name])
         # Initialize view by tag
-        if db_name in [verb_db, pronoun_db, option_db]:
-            # Add indices for tags
-            headers = {'Content-type': 'application/json'}
-            url = f'{URL}/{db_name}/_index'
-            index = {
-                "index": {
-                    "fields": [
-                        "tag"
-                    ]
-                },
-                "name": "tag-json-index",
-                "type": "json"
-            }
-            requests.post(url, data=json.dumps(index), headers=headers)
-        elif db_name == data_db:
+        # if db_name in [verb_db, pronoun_db, option_db]:
+        #     # Add indices for tags
+        #     headers = {'Content-type': 'application/json'}
+        #     url = f'{URL}/{db_name}/_index'
+        #     index = {
+        #         "index": {
+        #             "fields": [
+        #                 "tag"
+        #             ]
+        #         },
+        #         "name": "tag-json-index",
+        #         "type": "json"
+        #     }
+        #     requests.post(url, data=json.dumps(index), headers=headers)
+        if db_name == data_db:
             # Add indices for root by default
             headers = {'Content-type': 'application/json'}
             url = f'{URL}/{db_name}/_index'
