@@ -3,6 +3,9 @@ services:
   backend:
     volumes:
       - ./wwapi/wwapi:/app/wwapi
+  backend-tests:
+    volumes:
+      - ./wwapi/wwapi:/app/wwapi
   couchdb:
     volumes:
       - ./local.ini:/opt/couchdb/etc/local.ini

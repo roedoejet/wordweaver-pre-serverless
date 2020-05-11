@@ -2,10 +2,32 @@ from pydantic import BaseModel
 from typing import Any, List, Optional, Union
 from enum import Enum
 
+class ModelConfig:
+    use_enum_falues = True
 
 class Morpheme(BaseModel):
     value: str = ''
     position: int = 0
+
+
+class TierOptions(BaseModel):
+    language: str = 'L1'
+    showName: bool = False
+
+class TierValues(str, Enum):
+    # Must be key in ResponseMorpheme
+    gloss: "gloss"
+    english: "english"
+    value: "value"
+
+class Tier(BaseModel):
+    name: str = ''
+    separator: str = ''
+    position: int = 0
+    key: TierValues = 'value' # Must be key in ResponseMorpheme
+    options: TierOptions
+
+    Config = ModelConfig
 
 
 class Option(BaseModel):
@@ -13,6 +35,7 @@ class Option(BaseModel):
     gloss: str = ''
     tag: str = ''
     type: str = ''
+
 
 class Pronoun(BaseModel):
     ''' Required '''

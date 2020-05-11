@@ -5,9 +5,11 @@ import os
 
 import couchdb
 
+DEFAULT_LANG = 'fr'
+
 DATA_PATH = os.path.dirname(__file__)
 
-WWLANG = os.environ['WWLANG']
+WWLANG = os.environ.get('WWLANG', DEFAULT_LANG)
 
 with open(os.path.join(DATA_PATH, WWLANG, 'options.json')) as f:
     OPTION_DATA = json.load(f)
