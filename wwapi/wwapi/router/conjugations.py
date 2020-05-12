@@ -21,6 +21,7 @@ class ResponseType(str, Enum):
     csv = "csv"
     docx = 'docx'
     latex = 'latex'
+    # pdf = 'pdf'
 
 
 def return_selector(arg):
@@ -78,6 +79,13 @@ def create_files(root: List[str] = Query(None), option: List[str] = Query(None),
         path = document.write_to_temp()
         media_type = "text/plain"
         fn = "conjugations.tex"
+
+    # TODO: LaTeX is not creating a PDF properly and causing lots of errors 
+    # if file_type == 'pdf':
+    #     document = LatexFile(conjugations, tiers, settings)
+    #     path = document.write_to_temp(ftype='pdf')
+    #     media_type = "application/pdf"
+    #     fn = "conjugations.pdf"
 
     try:
         response = FileResponse(path=path,

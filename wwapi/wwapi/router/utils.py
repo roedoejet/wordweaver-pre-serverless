@@ -10,6 +10,7 @@ from typing import List
 from pydantic import BaseModel
 from jinja2 import Environment, FileSystemLoader
 from pylatexenc.latexencode import utf8tolatex
+from latex import build_pdf
 
 from wwapi.data import URL
 from wwapi.models import Response, Tier
@@ -108,16 +109,18 @@ class LatexFile(File):
         )
         self.template = self.latexJinjaEnv.get_template('template.tex')
 
-    def write_to_temp(self):
+    def write_to_temp(self, ftype = 'tex'):
         formatted_tiers = [[conjugation['output'] for conjugation in x] for x in self.formatted_data]
         data = {"title": self.settings['heading'], "conjugations": formatted_tiers}
         tex = utf8tolatex(self.sanitize(self.template.render(data=data)), non_ascii_only=True)
         fd, path = mkstemp()
-        with open(path, 'w') as f:
-            f.write(tex)
-        return path 
-        # return bytes(tex, encoding='utf8')
-
+        if ftype == 'pdf':
+            pdf = build_pdf(tex)
+            pdf.save_to(path)
+        else:
+            with open(path, 'w') as f:
+                f.write(tex)
+        return path
 
     def sanitize(self, data):
         escape_characters = ''.join(["%", "&"])

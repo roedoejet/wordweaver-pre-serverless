@@ -6,3 +6,4 @@ python-docx
 aiofiles
 Jinja2
 pylatexenc
+latex
