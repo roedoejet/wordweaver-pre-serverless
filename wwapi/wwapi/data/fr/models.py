@@ -3,7 +3,7 @@ from typing import Any, List, Optional, Union
 from enum import Enum
 
 class ModelConfig:
-    use_enum_falues = True
+    use_enum_values = True
 
 class Morpheme(BaseModel):
     value: str = ''
@@ -24,8 +24,8 @@ class Tier(BaseModel):
     name: str = ''
     separator: str = ''
     position: int = 0
-    key: TierValues = 'value' # Must be key in ResponseMorpheme
-    options: TierOptions
+    key: str = 'value' # Must be key in ResponseMorpheme
+    options: TierOptions = TierOptions()
 
     Config = ModelConfig
 

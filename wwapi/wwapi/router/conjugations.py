@@ -9,7 +9,7 @@ from enum import Enum
 from fastapi import APIRouter, Query, Response as FAResponse
 from fastapi.responses import FileResponse
 
-from wwapi.router.utils import DocxFile, find, FileSettings
+from wwapi.router.utils import CsvFile, DocxFile, LatexFile, find, FileSettings
 from wwapi.models import Response, Tier
 
 router = APIRouter()
@@ -55,28 +55,34 @@ def read_conjugations(root: List[str] = Query(None), option: List[str] = Query(N
     return conjugations
 
 
-@router.post("/conjugations", tags=['conjugations'])
+@router.post("/files", tags=['conjugations'])
 def create_files(root: List[str] = Query(None), option: List[str] = Query(None),
                  agent: List[str] = Query(None), patient: List[str] = Query(None),
                  file_type: ResponseType = 'docx', tiers: List[Tier] = None,
                  settings: FileSettings = FileSettings()):
     conjugations = read_conjugations(root, option, agent, patient)
-
-    if file_type == 'docx':
-        df = DocxFile(conjugations, tiers, settings)
-        document = df.export()
-        fd, path = mkstemp()
-        document.save(path)
-        try:
-            response = FileResponse(path=path,
-                                    filename="conjugations.docx",
-                                    media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-            return response
-        finally:
-            aos.remove(path)
+    if file_type == 'docx':   
+        document = DocxFile(conjugations, tiers, settings)
+        path = document.write_to_temp()
+        media_type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        fn = "conjugations.docx"
 
     if file_type == 'csv':
-        pass
+        document = CsvFile(conjugations, tiers, settings)
+        path = document.write_to_temp()
+        media_type = "text/csv"
+        fn = "conjugations.csv"
 
     if file_type == 'latex':
-        pass
+        document = LatexFile(conjugations, tiers, settings)
+        path = document.write_to_temp()
+        media_type = "text/plain"
+        fn = "conjugations.tex"
+
+    try:
+        response = FileResponse(path=path,
+                                filename=fn,
+                                media_type=media_type)
+        return response
+    finally:
+        aos.remove(path)

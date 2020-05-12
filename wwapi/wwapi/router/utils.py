@@ -1,15 +1,21 @@
 import json
+from tempfile import mkstemp
 import requests
+import csv
 
 from docx import Document
 from typing import List
 from pydantic import BaseModel
+from enum import Enum
 
 from wwapi.data import URL
 from wwapi.models import Response, Tier
 
+
 class FileSettings(BaseModel):
     heading: str = 'Conjugations'
+    headers: bool = True
+
 
 class File:
     """[summary]
@@ -51,9 +57,10 @@ class File:
                 tier = tier.dict()
                 # Filter empty and sort by position
                 output = sorted([x for x in conjugation['output']
-                        if x[tier['key']]], key=lambda x: x['position'])
+                                if x[tier['key']]], key=lambda x: x['position'])
                 # Join with separator
-                output = tier['separator'].join(map(lambda x: x[tier['key']], output))
+                output = tier['separator'].join(
+                    map(lambda x: x[tier['key']], output))
                 tiered_conjugation.append({'name': tier['name'],
                                            'options': tier['options'],
                                            'output': output})
@@ -66,7 +73,7 @@ class DocxFile(File):
         super(DocxFile, self).__init__(conjugations, tiers)
         self.settings = settings.dict()
 
-    def export(self):
+    def write_to_temp(self):
         # Add header
         self.document.add_heading(self.settings['heading'], 0)
         # Add each tier
@@ -74,21 +81,34 @@ class DocxFile(File):
             tiers = '\n'.join(map(lambda x: x['output'], conjugation))
             self.document.add_paragraph(tiers, style="List Number")
             self.document.add_paragraph()
-        return self.document
+        fd, path = mkstemp()
+        self.document.save(path)
+        return path
 
 
 class LatexFile(File):
-    def __init__(self, conjugations, tiers, **kwargs):
+    def __init__(self, conjugations, tiers, settings):
         super(LatexFile, self).__init__(conjugations, tiers)
-        self.kwargs = kwargs
+        self.settings = settings.dict()
 
-    def export(self):
-        return
+    def write_to_temp(self):
+        pass
+
 
 class CsvFile(File):
-    def __init__(self, conjugations, tiers, **kwargs):
+    def __init__(self, conjugations, tiers, settings: FileSettings):
         super(CsvFile, self).__init__(conjugations, tiers)
-        self.kwargs = kwargs
+        self.settings = settings.dict()
+
+    def write_to_temp(self):
+        fd, path = mkstemp()
+        with open(path, 'w') as f:
+            writer = csv.writer(f)
+            if self.settings['headers']:
+                writer.writerow([x.dict()['name'] for x in self.tiers])
+            for conjugation in self.formatted_data:
+                writer.writerow([x['output'] for x in conjugation])
+        return path
 
 
 def find(db_name, selector):
