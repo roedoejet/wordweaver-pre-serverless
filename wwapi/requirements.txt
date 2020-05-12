@@ -4,3 +4,5 @@ loguru
 tqdm
 python-docx
 aiofiles
+Jinja2
+pylatexenc
