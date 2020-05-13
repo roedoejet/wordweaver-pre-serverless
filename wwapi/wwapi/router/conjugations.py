@@ -59,7 +59,7 @@ def read_conjugations(root: List[str] = Query(None), option: List[str] = Query(N
 @router.post("/files", tags=['conjugations'])
 def create_files(root: List[str] = Query(None), option: List[str] = Query(None),
                  agent: List[str] = Query(None), patient: List[str] = Query(None),
-                 file_type: ResponseType = 'docx', tiers: List[Tier] = None,
+                 file_type: ResponseType = Query('docx', alias="file-type"), tiers: List[Tier] = None,
                  settings: FileSettings = FileSettings()):
     conjugations = read_conjugations(root, option, agent, patient)
     if file_type == 'docx':   
@@ -88,9 +88,10 @@ def create_files(root: List[str] = Query(None), option: List[str] = Query(None),
     #     fn = "conjugations.pdf"
 
     try:
+        headers = {'Content-Disposition': f'attachment; filename="{fn}"'}
         response = FileResponse(path=path,
                                 filename=fn,
-                                media_type=media_type)
+                                media_type=media_type, headers=headers)
         return response
     finally:
         aos.remove(path)
