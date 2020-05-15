@@ -48,6 +48,13 @@ class File:
         """
         return self._formatted_data
 
+
+    def sort_morphemes(self, x):
+        if 'position' in x:
+            return x['position']
+        else:
+            return 0
+
     def format(self):
         """[summary]
 
@@ -61,7 +68,7 @@ class File:
                 tier = tier.dict()
                 # Filter empty and sort by position
                 output = sorted([x for x in conjugation['output']
-                                 if x[tier['key']]], key=lambda x: x['position'])
+                                 if tier['key'] in x and x[tier['key']]], key=self.sort_morphemes)
                 # Join with separator
                 output = tier['separator'].join(
                     map(lambda x: x[tier['key']], output))
