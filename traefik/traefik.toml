@@ -16,7 +16,7 @@ defaultEntryPoints = ["https","http"]
 
 [docker]
 endpoint = "unix:///var/run/docker.sock"
-domain = "li223-249.members.linode.com"
+domain = "kawennonnis.ca"
 watch = true
 exposedByDefault = false
 
