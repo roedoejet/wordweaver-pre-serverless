@@ -22,8 +22,6 @@ services:
       volumes:
          - ./wwapi/wwapi:/app/wwapi
    certbot:
-      container_name: certbot
-      hostname: certbot
       image: certbot/certbot
       volumes:
          - ./volumes/ssl/certbot/conf:/etc/letsencrypt

@@ -6,6 +6,10 @@ server {
         root /var/www/certbot;
     }
 
+    location / {
+        return 301 https://$host$request_uri;
+    }
+
     # redirect server error pages to the static page /50x.html
     #
     error_page   500 502 503 504  /50x.html;
