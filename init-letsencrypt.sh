@@ -1,11 +1,12 @@
 #!/bin/bash
+source .env
 
 if ! [ -x "$(command -v docker-compose)" ]; then
   echo 'Error: docker-compose is not installed.' >&2
   exit 1
 fi
 
-domains=(${DOMAIN} www.${DOMAIN})
+domains=($DOMAIN)
 rsa_key_size=4096
 data_path="./volumes/ssl/certbot"
 email="aidanpine@shaw.ca" # Adding a valid address is strongly recommended
