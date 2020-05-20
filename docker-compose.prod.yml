@@ -17,6 +17,8 @@ services:
          - SERVER_NAME=${DOMAIN}
       expose:
          - 8080
+      networks:
+         - web
       volumes:
          - ./wwapi/wwapi:/app/wwapi
    certbot:
@@ -25,6 +27,8 @@ services:
          - ./volumes/ssl/certbot/conf:/etc/letsencrypt
          - ./volumes/ssl/certbot/www:/var/www/certbot
          - ./volumes/ssl/certbot/logs:/var/log/letsencrypt
+      networks:
+         - web
       entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
    couchdb:
       build:
@@ -34,6 +38,8 @@ services:
          - env-couch.env
       expose:
          - 5984
+      networks:
+         - web
       image: couchdb:latest
       volumes:
          - ./volumes/db/local.ini:/opt/couchdb/etc/local.ini
@@ -43,6 +49,8 @@ services:
          - SERVER_NAME=${DOMAIN}
       restart: always
       image: nginx:latest
+      networks:
+         - web
       ports: 
          - 80:80
          - 443:443
@@ -50,3 +58,6 @@ services:
          - ./volumes/reverse/nginx/conf/wordweaver.template:/etc/nginx/conf.d/wordweaver.template
          - ./volumes/ssl/certbot/conf:/etc/letsencrypt
          - ./volumes/ssl/certbot/www:/var/www/certbot
+networks:
+   web:
+      external: true
