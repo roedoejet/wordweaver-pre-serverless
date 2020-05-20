@@ -6,6 +6,7 @@ server {
         root /var/www/certbot;
     }
 
+    # Disabled because HTTPS is handled through CloudFlare
     #location / {
     #    return 301 https://$host$request_uri;
     #}
