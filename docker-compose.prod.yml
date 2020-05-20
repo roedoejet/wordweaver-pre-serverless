@@ -51,6 +51,6 @@ services:
          - 80:80
          - 443:443
       volumes:
-         - ./volumes/reverse/nginx/conf/default.template:/etc/nginx/conf.d/wordweaver.template
+         - ./volumes/reverse/nginx/conf/wordweaver.template:/etc/nginx/conf.d/wordweaver.template
          - ./volumes/ssl/certbot/conf:/etc/letsencrypt
          - ./volumes/ssl/certbot/www:/var/www/certbot
