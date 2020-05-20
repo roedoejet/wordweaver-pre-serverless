@@ -1,0 +1,56 @@
+version: '3.3'
+services:
+   backend:
+      container_name: backend
+      hostname: backend
+      build:
+         args: 
+            env: dev
+         context: ./wwapi
+         dockerfile: Dockerfile
+      command: 'bash -c "sleep 10 && wwapi init && /start-reload.sh"'
+      depends_on: 
+         - couchdb
+      env_file:
+         - env-couch.env
+         - env-backend.env
+      environment:
+         - SERVER_HOST=http://${DOMAIN}
+         - SERVER_NAME=${DOMAIN}
+      expose:
+         - 8080
+      volumes:
+         - ./wwapi/wwapi:/app/wwapi
+   certbot:
+      image: certbot/certbot
+      volumes:
+         - ./data/certbot/conf:/etc/letsencrypt
+         - ./data/certbot/www:/var/www/certbot
+      entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+   couchdb:
+      container_name: couchdb
+      hostname: couchdb
+      build:
+         context: ./
+         dockerfile: Dockerfile
+      env_file:
+         - env-couch.env
+      expose:
+         - 5984
+      image: couchdb:latest
+      volumes:
+         - ./volumes/db/local.ini:/opt/couchdb/etc/local.ini
+   reverse:
+      container_name: reverse
+      command: /bin/bash -c "envsubst < /etc/nginx/conf.d/wordweaver.template > /etc/nginx/conf.d/default.conf && /bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+      environment:
+         - SERVER_NAME=${DOMAIN}
+      restart: always
+      image: nginx:latest
+      ports: 
+         - 80:80
+         - 443:443
+      volumes:
+         - ./volumes/reverse/nginx/conf/default.template:/etc/nginx/conf.d/wordweaver.template
+         - ./volumes/ssl/certbot/conf:/etc/letsencrypt
+         - ./volumes/ssl/certbot/www:/var/www/certbot
