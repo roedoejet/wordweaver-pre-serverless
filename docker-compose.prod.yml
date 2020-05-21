@@ -13,8 +13,8 @@ services:
          - env-couch.env
          - env-backend.env
       environment:
-         - SERVER_HOST=http://${DOMAIN}
-         - SERVER_NAME=${DOMAIN}
+         - SERVER_HOST=http://backend
+         - SERVER_NAME=backend
       expose:
          - 8080
       networks:
@@ -44,7 +44,7 @@ services:
       volumes:
          - ./volumes/db/local.ini:/opt/couchdb/etc/local.ini
    reverse:
-      command: /bin/bash -c "envsubst < /etc/nginx/conf.d/wordweaver.template > /etc/nginx/conf.d/default.conf && /bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+      command: /bin/bash -c "envsubst '$$SERVER_NAME' < /etc/nginx/conf.d/wordweaver.template > /etc/nginx/conf.d/default.conf && /bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
       environment:
          - SERVER_NAME=${DOMAIN}
       restart: always

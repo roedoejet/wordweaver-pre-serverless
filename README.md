@@ -59,13 +59,26 @@ This project is the outcome of an idea from Owennatékha Brian Maracle to create
 
 ## Local Development & Deployment
 
-The following instructions are for deploying using docker compose. Note that this will run your container on a single node. If you want to scale up your application (congrats, you're getting a lot of traffic), then edit the files labelled  `docker-compose.deploy.*.yml` to run your app on a Docker Swarm cluster.
+The following instructions are for deploying using docker compose.
 
 To run locally and deploy a basic service, you must have Docker installed, and then follow the steps from above:
 
 * Once the validation passes, go back to the root and run `docker-compose build`
 * Then, to run your local version, `docker-compose up`
 * You can stop the service by running `docker-compose down`
+
+To build the production version:
+
+Requirements:
+  - VPS
+  - Domain
+  - DNS control
+
+* Set up DNS to point to your VPS that will host the site.
+* Clone this repo
+* Change the email and domain in `.env`
+* run `init-letsencrypt.sh` to get an SSL cert for your site
+* run `docker-compose -f docker-compose.prod.yml up` to spin up your site 
 
 ## Usage
 
