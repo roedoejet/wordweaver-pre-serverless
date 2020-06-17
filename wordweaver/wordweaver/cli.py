@@ -1,8 +1,5 @@
 import click
-import os
-
-from loguru import logger
-from wwapi.data.utils import initialize_db, validate
+from wordweaver.data.utils import gzip_assets, validate
 
 @click.group()
 def cli():
@@ -16,6 +13,6 @@ def validate_data():
 
 @cli.command()
 def init():
-    ''' Initialize Database
+    ''' Initialize JSON Assets
     '''
-    initialize_db()
+    gzip_assets()

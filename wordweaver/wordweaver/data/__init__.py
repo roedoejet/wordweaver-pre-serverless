@@ -3,9 +3,7 @@
 import json
 import os
 
-import couchdb
-
-DEFAULT_LANG = 'fr'
+DEFAULT_LANG = 'moh'
 
 DATA_PATH = os.path.dirname(__file__)
 
@@ -19,9 +17,3 @@ with open(os.path.join(DATA_PATH, WWLANG, 'verbs.json')) as f:
     VERB_DATA = json.load(f)
 with open(os.path.join(DATA_PATH, WWLANG, 'conjugations.json')) as f:
     CONJUGATION_DATA = json.load(f)
-
-
-USER = os.environ.get('COUCHDB_USER', '')
-PASSWORD = os.environ.get('COUCHDB_PASSWORD', '')
-COUCHSERVER = couchdb.Server('http://%s:%s@couchdb:5984' % (USER, PASSWORD))
-URL = f'http://{USER}:{PASSWORD}@couchdb:5984'

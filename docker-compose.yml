@@ -6,13 +6,10 @@ services:
       build:
          args: 
             env: dev
-         context: ./wwapi
+         context: ./wordweaver
          dockerfile: Dockerfile
-      command: 'bash -c "sleep 10 && wwapi init && /start-reload.sh"'
-      depends_on: 
-         - couchdb
+      command: 'bash -c "wordweaver validate-data && wordweaver init && /start-reload.sh"'
       env_file:
-         - env-couch.env
          - env-backend.env
       environment:
          - SERVER_HOST=http://${DOMAIN}
@@ -20,17 +17,4 @@ services:
       ports:
          - 80:8080
       volumes:
-         - ./wwapi/wwapi:/app/wwapi
-   couchdb:
-      container_name: couchdb
-      hostname: couchdb
-      build:
-         context: ./
-         dockerfile: Dockerfile
-      env_file:
-         - env-couch.env
-      ports:
-         - 5984:5984
-      image: couchdb:latest
-      volumes:
-         - ./volumes/db/local.ini:/opt/couchdb/etc/local.ini
+         - ./wordweaver/wordweaver:/app/wordweaver

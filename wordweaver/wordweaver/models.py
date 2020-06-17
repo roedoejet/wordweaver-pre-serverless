@@ -1,13 +1,13 @@
 import os
-from wwapi.data import __file__ as DATAROOT, DEFAULT_LANG
+from wordweaver.data import __file__ as DATAROOT, DEFAULT_LANG
 from importlib import import_module
-from wwapi.log import logger
+from wordweaver.log import logger
 
 DATA_DIR = os.path.dirname(DATAROOT)
 WWLANG = os.environ.get('WWLANG', DEFAULT_LANG)
 
 if os.path.exists(os.path.join(DATA_DIR, WWLANG)):
-    module = import_module(f'wwapi.data.{WWLANG}.models')
+    module = import_module(f'wordweaver.data.{WWLANG}.models')
     Option = module.Option
     Pronoun = module.Pronoun
     Verb = module.Verb

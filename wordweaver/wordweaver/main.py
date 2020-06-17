@@ -1,14 +1,15 @@
 """Main WordWeaver run file
 """
-
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 
-from wwapi.router import conjugations, options, pronouns, verbs
+from wordweaver.router import conjugations, options, pronouns, verbs
 
 # FastAPI specific code
-app = FastAPI()
+app = FastAPI(title="WordWeaver API",
+    description="Welcome to the WordWeaver documentation. Please visit <a href='https://docs.wordweaver.ca'>https://docs.wordweaver.ca</a> for more information.",
+    version="1.0",)
 
 app.add_middleware(
     CORSMiddleware,

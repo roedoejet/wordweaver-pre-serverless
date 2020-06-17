@@ -41,14 +41,14 @@ This project is the outcome of an idea from Owennatékha Brian Maracle to create
 
 1. After making sure you have the prerequisite technologies, clone this repo
 2. In the root of the repo, make the following changes:
-    * Create a new folder in `wwapi/wwapi/data/` (ideally with the ISO code of your language)
+    * Create a new folder in `wordweaver/wordweaver/data/` (ideally with the ISO code of your language)
     * Add an empty `__init__.py` file
     * Copy one of the `models.py` files in the other data directories and past it into your folder
     * Create four JSON files, `conjugations.json`, `options.json`, `pronouns.json` and `verbs.json`
     * Populate the files with the data required for your language
     * Update the `models.py` file to reflect your data structure
-    * Pip install `wwapi` (`cd wwapi && pip install -e .`)
-    * Validate your data: `wwapi validate-data` and fix any type errors
+    * Pip install `wordweaver` (`cd wordweaver && pip install -e .`)
+    * Validate your data: `wordweaver validate-data` and fix any type errors
     * Once the validation passes, go back to the root and run `docker-compose build`
     * Then, to run your local version, `docker-compose up`
     * You can stop the service by running `docker-compose down`

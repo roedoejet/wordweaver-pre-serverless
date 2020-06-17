@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 from fastapi.testclient import TestClient
 
-from wwapi.main import app
+from wordweaver.main import app
 
 class MainTest(TestCase):
     """Main Tests for API

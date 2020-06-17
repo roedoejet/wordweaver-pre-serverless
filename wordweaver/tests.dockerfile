@@ -3,7 +3,7 @@ FROM tiangolo/uvicorn-gunicorn-fastapi:python3.6
 COPY ./requirements.txt /app/requirements.txt
 COPY ./setup.py /app/setup.py
 
-COPY ./wwapi /app/wwapi
+COPY ./wordweaver /app/wordweaver
 COPY ./test /app/test
 COPY ./start-tests.sh /start-tests.sh
 

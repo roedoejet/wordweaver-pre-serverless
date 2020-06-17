@@ -4,13 +4,10 @@ services:
       build:
          args: 
             env: dev
-         context: ./wwapi
+         context: ./wordweaver
          dockerfile: Dockerfile
-      command: 'bash -c "sleep 10 && wwapi init && /start-reload.sh"'
-      depends_on: 
-         - couchdb
+      command: 'bash -c "sleep 10 && wordweaver init && /start-reload.sh"'
       env_file:
-         - env-couch.env
          - env-backend.env
       environment:
          - SERVER_HOST=http://backend
@@ -20,7 +17,7 @@ services:
       networks:
          - web
       volumes:
-         - ./wwapi/wwapi:/app/wwapi
+         - ./wordweaver/wordweaver:/app/wordweaver
    certbot:
       image: certbot/certbot
       volumes:
@@ -30,19 +27,6 @@ services:
       networks:
          - web
       entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-   couchdb:
-      build:
-         context: ./
-         dockerfile: Dockerfile
-      env_file:
-         - env-couch.env
-      expose:
-         - 5984
-      networks:
-         - web
-      image: couchdb:latest
-      volumes:
-         - ./volumes/db/local.ini:/opt/couchdb/etc/local.ini
    reverse:
       command: /bin/bash -c "envsubst '$$SERVER_NAME' < /etc/nginx/conf.d/wordweaver.template > /etc/nginx/conf.d/default.conf && /bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
       environment:

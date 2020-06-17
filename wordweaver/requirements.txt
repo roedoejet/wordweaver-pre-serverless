@@ -1,5 +1,4 @@
 requests
-couchdb
 loguru
 tqdm
 python-docx

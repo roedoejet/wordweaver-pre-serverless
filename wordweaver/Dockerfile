@@ -3,7 +3,7 @@ FROM tiangolo/uvicorn-gunicorn-fastapi:python3.6
 COPY ./requirements.txt /app/requirements.txt
 COPY ./setup.py /app/setup.py
 
-COPY ./wwapi /app/wwapi
+COPY ./wordweaver /app/wordweaver
 
 # RUN apt-get update && apt-get install texlive texlive-humanities -y
 

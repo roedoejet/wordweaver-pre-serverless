@@ -11,7 +11,7 @@ with open(path.join(this_directory, 'requirements.txt')) as f:
     REQS = f.read().splitlines()
 
 setup(
-    name='wwapi',
+    name='wordweaver',
     python_requires='>=3.6',
     license="MIT",
     author='Aidan Pine, Anna Kazantseva',
@@ -26,7 +26,7 @@ setup(
     zip_safe=False,
     entry_points={
         'console_scripts': [
-            'wwapi = wwapi.cli:cli'
+            'wordweaver = wordweaver.cli:cli'
         ]
     },
     install_requires=REQS

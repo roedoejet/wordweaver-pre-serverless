@@ -1,10 +1,8 @@
 import os
 import re
-import json
 from tempfile import mkstemp
 
 import csv
-import requests
 from docx import Document
 from typing import List
 from pydantic import BaseModel
@@ -12,8 +10,7 @@ from jinja2 import Environment, FileSystemLoader
 from pylatexenc.latexencode import utf8tolatex
 from latex import build_pdf
 
-from wwapi.data import URL
-from wwapi.models import Response, Tier
+from wordweaver.models import Response, Tier
 
 
 class FileSettings(BaseModel):
@@ -161,12 +158,3 @@ class CsvFile(File):
             for conjugation in self.formatted_data:
                 writer.writerow([x['output'] for x in conjugation])
         return path
-
-
-def find(db_name, selector):
-    # This needs to be updated in the router
-    headers = {'Content-type': 'application/json'}
-    url = f'{URL}/{db_name}/_find'
-    response = requests.post(url, data=json.dumps(
-        {'selector': selector}), headers=headers)
-    return response.json()

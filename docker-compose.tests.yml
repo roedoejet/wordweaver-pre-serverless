@@ -1,16 +1,13 @@
 services:
    backend-tests:
       build:
-         context: ./wwapi
+         context: ./wordweaver
          dockerfile: tests.dockerfile
       command: bash -c "while true; do sleep 1; done"
-      depends_on: 
-         - couchdb
          - backend
       env_file:
-         - env-couch.env
          - env-backend.env
       environment:
          - SERVER_NAME=backend
       volumes:
-         - ./wwapi/wwapi:/app/wwapi
+         - ./wordweaver/wordweaver:/app/wordweaver

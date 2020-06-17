@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from fastapi.testclient import TestClient
 
-from wwapi.main import app
+from wordweaver.main import app
 
 class BuildTest(TestCase):
     """Tests for constructing file format exports
