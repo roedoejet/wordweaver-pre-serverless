@@ -3,7 +3,7 @@
 import json
 import os
 
-DEFAULT_LANG = 'moh'
+DEFAULT_LANG = 'fr'
 
 DATA_PATH = os.path.dirname(__file__)
 

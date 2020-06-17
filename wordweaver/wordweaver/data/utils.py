@@ -63,8 +63,10 @@ def validate():
 def gzip_assets():
     """ This function gzips all of your json data to intialize it for your WordWeaver. This is the recommended method
     """
+    logger.info("Starting to optimize and gzip assets")
     p = Path(os.path.join(DATA_PATH, WWLANG))
-    for fn in p.glob('*.json'):
+    for fn in tqdm(p.glob('*.json')):
+        logger.info(f"Optimizing and gzipping '{fn.name}'")
         # if fn.stat().st_size > 1400:
         file_path = str(fn)
         with open(file_path) as f:
