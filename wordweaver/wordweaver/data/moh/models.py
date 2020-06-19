@@ -1,7 +1,10 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Union
 from enum import Enum
 
+class TranslationBase(BaseModel):
+    en: Union[str, dict]
+    moh: Union[str, dict]
 
 class Morpheme(BaseModel):
     value: str = ''
@@ -20,32 +23,26 @@ class Tier(BaseModel):
     options: TierOptions
 
 
-class Option(BaseModel):
+class Option(TranslationBase):
     ''' Required '''
     tag: str = ''
-    gloss: str = ''
     classes: List[str]
 
 
-class Pronoun(BaseModel):
+class Pronoun(TranslationBase):
     ''' Required '''
     person: str = ''
     number: str = ''
     gender: str = ''
     inclusivity: str = ''
     role: str = ''
-    value: str = ''
-    gloss: str = ''
-    obj_gloss: str = ''
     position: int = 0
     tag: str = ''
 
 
-class Verb(BaseModel):
+class Verb(TranslationBase):
     ''' Required '''
     thematic_relation: str = ''
-    display: str = ''
-    gloss: str = ''
     tag: str = ''
     classes: List[str] = []
 

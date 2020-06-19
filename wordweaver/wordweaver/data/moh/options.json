@@ -1,100 +1,160 @@
 [
     {
         "tag": "habpres",
-        "gloss": "Habitual (present)",
         "classes": [
             "aspect",
             "tmp_affix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.habpres"
+        },
+        "en": {
+            "tag": "Habitual (present)"
+        }
     },
     {
         "tag": "habfut",
-        "gloss": "Habitual (future)",
         "classes": [
             "aspect",
             "tmp_affix",
             "post_aspectual_suffix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.habfut"
+        },
+        "en": {
+            "tag": "Habitual (future)"
+        }
     },
     {
         "tag": "habpast",
-        "gloss": "Habitual (past)",
         "classes": [
             "aspect",
             "post_aspectual_suffix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.habpast"
+        },
+        "en": {
+            "tag": "Habitual (past)"
+        }
     },
     {
         "tag": "habcond",
-        "gloss": "Habitual (conditional)",
         "classes": [
             "aspect",
             "tmp_affix",
             "post_aspectual_suffix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.habcond"
+        },
+        "en": {
+            "tag": "Habitual (conditional)"
+        }
     },
     {
         "tag": "command",
-        "gloss": "Command",
         "classes": [
             "aspect",
             "tmp_affix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.command"
+        },
+        "en": {
+            "tag": "Command"
+        }
     },
     {
         "tag": "defpast",
-        "gloss": "Definite Past",
         "classes": [
             "aspect",
             "tmp_affix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.defpast"
+        },
+        "en": {
+            "tag": "Definite Past"
+        }
     },
     {
         "tag": "indef",
-        "gloss": "Indefinite",
         "classes": [
             "aspect",
             "tmp_affix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.indef"
+        },
+        "en": {
+            "tag": "Indefinite"
+        }
     },
     {
         "tag": "punctfut",
-        "gloss": "Future (punctual)",
         "classes": [
             "aspect",
             "tmp_affix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.punctfut"
+        },
+        "en": {
+            "tag": "Future (punctual)"
+        }
     },
     {
         "tag": "perfpres",
-        "gloss": "Perfective (present)",
         "classes": [
             "aspect",
             "tmp_affix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.perfpres"
+        },
+        "en": {
+            "tag": "Perfective (present)"
+        }
     },
     {
         "tag": "perfcond",
-        "gloss": "Perfective (conditional)",
         "classes": [
             "aspect",
             "tmp_affix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.perfcond"
+        },
+        "en": {
+            "tag": "Perfective (conditional)"
+        }
     },
     {
         "tag": "presprogr",
-        "gloss": "Progressive (present)",
         "classes": [
             "aspect",
             "post_aspectual_suffix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.presprogr"
+        },
+        "en": {
+            "tag": "Progressive (present)"
+        }
     },
     {
         "tag": "statepres",
-        "gloss": "Stative (present)",
         "classes": [
             "aspect",
             "tmp_affix"
-        ]
+        ],
+        "moh": {
+            "tag": "ww-data.options.items.statepres"
+        },
+        "en": {
+            "tag": "Stative (present)"
+        }
     }
 ]

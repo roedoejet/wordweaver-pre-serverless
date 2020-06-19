@@ -17,6 +17,7 @@ fmt = "\n <level>WordWeaver</level> | <green>{function}</green> | {message} \n"
 logger.remove()
 logger.add(sys.stderr, format=fmt, colorize=True)
 
+
 def validate():
     # Shared messages
     CHECKING = "Checking {} {}..."
@@ -65,7 +66,7 @@ def gzip_assets():
     """
     logger.info("Starting to optimize and gzip assets")
     p = Path(os.path.join(DATA_PATH, WWLANG))
-    for fn in tqdm(p.glob('*.json')):
+    for fn in tqdm(list(p.glob('*.json')) + list(p.glob('i18n/*.json'))):
         logger.info(f"Optimizing and gzipping '{fn.name}'")
         # if fn.stat().st_size > 1400:
         file_path = str(fn)
@@ -78,12 +79,13 @@ def gzip_assets():
             for k, v in data[0]['input'].items():
                 if len(v) >= longest:
                     longest = len(v)
-                    longest_key = k   
+                    longest_key = k
             data.sort(key=lambda o: o["input"][longest_key], reverse=True)
             assert all(set(o.keys()) == {"input", "output"} for o in data)
 
         with gzip.open(file_path + '.gz', 'wt') as zipfile:
-            json.dump(data, zipfile, separators=(",",":"), ensure_ascii=False, sort_keys=True)
+            json.dump(data, zipfile, separators=(",", ":"),
+                      ensure_ascii=False, sort_keys=True)
 
 
 def create_protobufs():
@@ -107,3 +109,99 @@ def create_protobufs():
         zipfile.write(protobuf_data.SerializeToString())
     with gzip.open('test.protobuf.gz', 'wb') as zipfile:
         zipfile.write(protobuf_data.SerializeToString())
+
+
+def i18n_extract(langs, **kwargs):
+    logger.info(f"Extracting translations for {WWLANG}")
+    default = None
+    i18n_path = os.path.join(DATA_PATH, WWLANG, 'i18n')
+    if not os.path.exists(i18n_path):
+        os.mkdir(i18n_path)
+    # Extract all tags
+    if default is None:
+        options = {item['tag']: f"ww-data.options.items.{item['tag']}" for item in OPTION_DATA}
+        option_types = {item['type']: f"ww-data.options.types.{item['type']}" for item in OPTION_DATA if 'type' in item}
+        agents = {item['tag']: f"ww-data.pronouns.agents.{item['tag']}" for item in PRONOUN_DATA}
+        patients = {item['tag']: f"ww-data.pronouns.patients.{item['tag']}" for item in PRONOUN_DATA}
+        verbs = {item['tag']: f"ww-data.verbs.{item['tag']}" for item in VERB_DATA}
+    else:
+        options = {item['tag']: default for item in OPTION_DATA}
+        option_types = {item['type']: default for item in OPTION_DATA if 'type' in item}
+        agents = {item['tag']: default for item in PRONOUN_DATA}
+        patients = agents
+        verbs = {item['tag']: default for item in VERB_DATA}
+    i18n_data = {'ww-data': {'options': {"items": options, "types": option_types}, "pronouns": {
+        "agents": agents, "patients": patients}, "verbs": verbs}}
+
+    # Update each existing lang, and write new ones
+    for lang in tqdm([l for l in langs]):
+        logger.info(f"Processing translations for '{lang}'")
+        lang_path = os.path.join(i18n_path, lang + '.json')
+        if os.path.exists(lang_path):
+            logger.info(
+                f"Translations exist for '{lang}', attempting to merge")
+            with open(lang_path) as f:
+                lang_data = json.load(f)
+            if kwargs['force']:
+                logger.warning(f"Force overriding existing translations")
+                lang_data = {**lang_data, **i18n_data}
+            else:
+                logger.info(f"Merging with existing translations.")
+                lang_data = {**i18n_data, **lang_data}
+        else:
+            logger.info(
+                f"Translations do not exist for '{lang}', attempting to create new file")
+            lang_data = i18n_data
+        with open(lang_path, 'w') as f:
+            json.dump(lang_data, f)
+    logger.info(
+        f"Process finished. Please review your translations. Then add them to your assets by using 'wordweaver add-translations'")
+
+def i18n_add(langs, **kwargs):
+
+    logger.info(f"Adding translations for {WWLANG}")
+    assets = ['pronouns', 'options', 'verbs']
+    if kwargs['assets']:
+        assets = [a for a in kwargs['assets']]
+    assets_path = os.path.join(DATA_PATH, WWLANG)
+    i18n_path = os.path.join(assets_path, 'i18n')
+    for lang in [l for l in langs]:
+        with open(os.path.join(i18n_path, lang + '.json')) as f:
+            i18n_data = json.load(f)
+        for asset in assets:
+            with open(os.path.join(assets_path, asset + '.json')) as f:
+                asset_data = json.load(f)
+            if asset == 'verbs':
+                for k, v in tqdm(i18n_data['ww-data']['verbs'].items()):
+                    for verb in asset_data:
+                        if verb['tag'] == k:
+                            verb[lang] = v
+            elif asset == 'options':
+                for k, v in tqdm(i18n_data['ww-data']['options']['types'].items()):
+                    for option in asset_data:
+                        if option['type'] == k:
+                            if lang not in option:
+                                option[lang] = {}
+                            option[lang]['type'] = v
+                for k, v in tqdm(i18n_data['ww-data']['options']['items'].items()):
+                    for option in asset_data:
+                        if option['tag'] == k:
+                            if lang not in option:
+                                option[lang] = {}
+                            option[lang]['tag'] = v            
+            elif asset == 'pronouns':
+                for k, v in tqdm(i18n_data['ww-data']['pronouns']['agents'].items()):
+                    for pn in asset_data:
+                        if pn['tag'] == k:
+                            if lang not in pn:
+                                pn[lang] = {}
+                            pn[lang]['agent'] = v
+                for k, v in tqdm(i18n_data['ww-data']['pronouns']['patients'].items()):
+                    for pn in asset_data:
+                        if pn['tag'] == k:
+                            if lang not in pn:
+                                option[lang] = {}
+                            pn[lang]['patient'] = v
+            logger.info(f'Writing translated data to {asset}')
+            with open(os.path.join(assets_path, asset + '.json'), 'w') as f:
+                json.dump(asset_data, f)

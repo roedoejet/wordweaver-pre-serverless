@@ -2,6 +2,10 @@ from pydantic import BaseModel
 from typing import Any, List, Optional, Union
 from enum import Enum
 
+class TranslationBase(BaseModel):
+    en: Union[str, dict]
+    fr: Union[str, dict]
+
 class ModelConfig:
     use_enum_values = True
 
@@ -30,29 +34,22 @@ class Tier(BaseModel):
     Config = ModelConfig
 
 
-class Option(BaseModel):
+class Option(TranslationBase):
     ''' Required '''
-    gloss: str = ''
     tag: str = ''
     type: str = ''
 
 
-class Pronoun(BaseModel):
+class Pronoun(TranslationBase):
     ''' Required '''
     person: str = ''
     number: str = ''
     gender: str = ''
-    inclusivity: str = ''
-    role: str = ''
-    gloss: str = ''
-    obj_gloss: str = ''
-    position: int = 0
     tag: str = ''
 
 
-class Verb(BaseModel):
+class Verb(TranslationBase):
     ''' Required '''
-    gloss: str = ''
     tag: str = ''
     classes: List[str] = []
 

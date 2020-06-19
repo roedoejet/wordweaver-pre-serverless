@@ -1,9 +1,13 @@
 """Main WordWeaver run file
 """
+import os
+
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
+from wordweaver.data import DATA_PATH, WWLANG
 from wordweaver.router import conjugations, options, pronouns, verbs
 
 # FastAPI specific code
@@ -18,6 +22,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+i18n_assets_path = os.path.join(DATA_PATH, WWLANG, 'i18n')
+if os.path.exists(i18n_assets_path):
+    app.mount("/i18n", StaticFiles(directory=i18n_assets_path), name="i18n")
 
 @app.get("/", include_in_schema=False)
 async def home():
