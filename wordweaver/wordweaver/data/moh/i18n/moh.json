@@ -2,18 +2,18 @@
     "ww-data": {
         "options": {
             "items": {
-                "habpres": "ww-data.options.items.habpres",
-                "habfut": "ww-data.options.items.habfut",
-                "habpast": "ww-data.options.items.habpast",
-                "habcond": "ww-data.options.items.habcond",
-                "command": "ww-data.options.items.command",
-                "defpast": "ww-data.options.items.defpast",
-                "indef": "ww-data.options.items.indef",
-                "punctfut": "ww-data.options.items.punctfut",
-                "perfpres": "ww-data.options.items.perfpres",
-                "perfcond": "ww-data.options.items.perfcond",
-                "presprogr": "ww-data.options.items.presprogr",
-                "statepres": "ww-data.options.items.statepres"
+                "habpres": null,
+                "habfut": null,
+                "habpast": null,
+                "habcond": null,
+                "command": null,
+                "defpast": null,
+                "indef": null,
+                "punctfut": null,
+                "perfpres": null,
+                "perfcond": null,
+                "presprogr": null,
+                "statepres": null
             },
             "types": {}
         },
