@@ -14,8 +14,7 @@
                 "perfcond": "Perfective (conditional)",
                 "presprogr": "Progressive (present)",
                 "statepres": "Stative (present)"
-            },
-            "types": {}
+            }
         },
         "pronouns": {
             "agents": {
