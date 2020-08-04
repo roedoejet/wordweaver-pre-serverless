@@ -44,7 +44,7 @@ Note: there is a limitation with using a flat file architecture. We have some op
 
 1. After making sure you have the prerequisite technologies, clone this repo
 2. In the root of the repo, make the following changes:
-    * Create a new folder in `wordweaver/wordweaver/data/` (ideally with the ISO code of your language)
+    * Create a new folder in `src/wordweaver/data/` (ideally with the ISO code of your language)
     * Add an empty `__init__.py` file
     * Copy one of the `models.py` files in the other data directories and past it into your folder
     * Create four JSON files, `conjugations.json`, `options.json`, `pronouns.json` and `verbs.json`
