@@ -1,5 +1,6 @@
 requests
 loguru
+click
 tqdm
 python-docx
 aiofiles

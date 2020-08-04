@@ -23,13 +23,13 @@ def add_translations(langs, **kwargs):
     i18n_add(langs, **kwargs)
 
 @cli.command()
-def validate_data():
-    ''' See if data is clean
+def validate():
+    ''' Validate data against declared types
     '''
     validate()
 
 @cli.command()
-def init():
-    ''' Initialize JSON Assets
+def compress():
+    ''' Compress JSON Assets
     '''
     gzip_assets()

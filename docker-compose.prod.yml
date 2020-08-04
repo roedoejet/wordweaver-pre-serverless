@@ -6,7 +6,7 @@ services:
             env: dev
          context: ./src
          dockerfile: Dockerfile
-      command: 'bash -c "wordweaver validate-data && wordweaver init && /start-reload.sh"'
+      command: 'bash -c "wordweaver validate && wordweaver compress && /start-reload.sh"'
       env_file:
          - env-backend.env
       environment:
