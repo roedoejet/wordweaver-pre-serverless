@@ -3,9 +3,9 @@
 """ Execution script for running tests
 """
 
-from unittest import TestLoader, TextTestRunner, TestSuite
-import sys
 import os
+import sys
+from unittest import TestLoader, TestSuite, TextTestRunner
 
 # Unit tests
 from test_main import MainTest

@@ -5,9 +5,8 @@ from typing import List
 
 from fastapi import APIRouter, HTTPException
 
-from wordweaver.models import Verb
-
 from wordweaver.data import VERB_DATA
+from wordweaver.models import Verb
 
 router = APIRouter()
 

@@ -1,17 +1,20 @@
 # -*- coding: utf-8 -*-
-from wordweaver.data import OPTION_DATA, CONJUGATION_DATA, VERB_DATA, PRONOUN_DATA, DATA_PATH, WWLANG
-from wordweaver.models import Option, Pronoun, Verb, ResponseObject
-from tqdm import tqdm
+import gzip
+import json
+import os
+import sys
+from importlib import import_module
+from pathlib import Path
+from pprint import pformat
+
+import requests
 from loguru import logger
 from pydantic.error_wrappers import ValidationError
-from pprint import pformat
-import sys
-import os
-import requests
-import json
-from pathlib import Path
-import gzip
-from importlib import import_module
+from tqdm import tqdm
+
+from wordweaver.data import (CONJUGATION_DATA, DATA_PATH, OPTION_DATA,
+                             PRONOUN_DATA, VERB_DATA, WWLANG)
+from wordweaver.models import Option, Pronoun, ResponseObject, Verb
 
 fmt = "\n <level>WordWeaver</level> | <green>{function}</green> | {message} \n"
 logger.remove()

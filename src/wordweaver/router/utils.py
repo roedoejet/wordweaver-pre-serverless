@@ -1,14 +1,14 @@
+import csv
 import os
 import re
 from tempfile import mkstemp
-
-import csv
-from docx import Document
 from typing import List
-from pydantic import BaseModel
+
+from docx import Document
 from jinja2 import Environment, FileSystemLoader
-from pylatexenc.latexencode import utf8tolatex
 from latex import build_pdf
+from pydantic import BaseModel
+from pylatexenc.latexencode import utf8tolatex
 
 from wordweaver.models import Response, Tier
 

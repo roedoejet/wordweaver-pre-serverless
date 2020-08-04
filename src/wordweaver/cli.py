@@ -1,5 +1,7 @@
 import click
-from wordweaver.data.utils import i18n_add, i18n_extract, gzip_assets, validate
+
+from wordweaver.data.utils import gzip_assets, i18n_add, i18n_extract, validate
+
 
 @click.group()
 def cli():

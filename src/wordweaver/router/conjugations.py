@@ -1,16 +1,16 @@
 ''' This is the API endpoint for Conjugations
 '''
 import os
-from typing import List
 from enum import Enum
+from typing import List
 
 from aiofiles import os as aos
 from fastapi import APIRouter, Query
 from fastapi.responses import FileResponse
 
-from wordweaver.router.utils import CsvFile, DocxFile, LatexFile, FileSettings
+from wordweaver.data import CONJUGATION_DATA, DATA_PATH, WWLANG
 from wordweaver.models import Response, Tier
-from wordweaver.data import DATA_PATH, WWLANG, CONJUGATION_DATA
+from wordweaver.router.utils import CsvFile, DocxFile, FileSettings, LatexFile
 
 router = APIRouter()
 

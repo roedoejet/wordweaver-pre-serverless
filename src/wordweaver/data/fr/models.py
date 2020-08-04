@@ -1,6 +1,8 @@
-from pydantic import BaseModel
-from typing import Any, List, Optional, Union
 from enum import Enum
+from typing import Any, List, Optional, Union
+
+from pydantic import BaseModel
+
 
 class TranslationBase(BaseModel):
     en: Union[str, dict]

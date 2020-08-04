@@ -1,6 +1,8 @@
 import os
-from wordweaver.data import __file__ as DATAROOT, DEFAULT_LANG
 from importlib import import_module
+
+from wordweaver.data import DEFAULT_LANG
+from wordweaver.data import __file__ as DATAROOT
 from wordweaver.log import logger
 
 DATA_DIR = os.path.dirname(DATAROOT)
