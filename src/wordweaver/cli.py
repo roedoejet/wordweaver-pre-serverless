@@ -9,7 +9,7 @@ def cli():
 @click.argument('langs', nargs=-1)
 @cli.command()
 def extract_translations(langs, **kwargs):
-    ''' Extract translations 
+    ''' Extract translations
     '''
     i18n_extract(langs, **kwargs)
 

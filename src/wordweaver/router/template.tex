@@ -3,14 +3,14 @@
     \usepackage{graphicx}
     \usepackage{multicol}
     \usepackage{expex}
-    
+
     \title{ \jvar{ data.title } }
-    
+
     \begin{document}
     \maketitle
-    
+
     \begin{multicols}{2} \raggedcolumns
-    
+
     \jblock{ for c in data.conjugations }
         \lingset{glspace=!0pt plus .2em}
         \ex[glhangstyle=none]
@@ -28,5 +28,5 @@
         \xe
     \jblock{ endfor }
     \end{multicols}
-    
+
     \end{document}

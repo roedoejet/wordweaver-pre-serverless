@@ -188,7 +188,7 @@ def i18n_add(langs, **kwargs):
                         if option['tag'] == k:
                             if lang not in option:
                                 option[lang] = {}
-                            option[lang]['tag'] = v            
+                            option[lang]['tag'] = v
             elif asset == 'pronouns':
                 for k, v in tqdm(i18n_data['ww-data']['pronouns']['agents'].items()):
                     for pn in asset_data:

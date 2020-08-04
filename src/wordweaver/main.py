@@ -50,4 +50,3 @@ app.include_router(
     conjugations.router,
     prefix='/api/v1'
 )
-    

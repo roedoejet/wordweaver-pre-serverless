@@ -57,7 +57,7 @@ Note: there is a limitation with using a flat file architecture. We have some op
     * You can stop the service by running `docker-compose down`
     * Then, visit `http://localhost:5200/docs` to see the details of using your API.
     * Change the `WWLANG` environment variable in `env-backend.env` to the name of your language folder
-  
+
 3. Head over to **wordweaver-UI** repo and configure that for usage with this API.
 
 ## Local Development & Deployment
@@ -81,7 +81,7 @@ Requirements:
 * Clone this repo
 * Change the email and domain in `.env`
 * run `init-letsencrypt.sh` to get an SSL cert for your site
-* run `docker-compose -f docker-compose.prod.yml up` to spin up your site 
+* run `docker-compose -f docker-compose.prod.yml up` to spin up your site
 
 ## Usage
 

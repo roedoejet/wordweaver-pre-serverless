@@ -13,7 +13,7 @@ class MainTest(TestCase):
     def setUp(self):
         self.client = TestClient(app)
         self.wwlangs = ['fr']
-        
+
 
     def test_read_main(self):
         for lang in self.wwlangs:

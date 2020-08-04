@@ -2,7 +2,7 @@ version: '3.3'
 services:
    backend:
       build:
-         args: 
+         args:
             env: dev
          context: ./src
          dockerfile: Dockerfile
@@ -35,7 +35,7 @@ services:
       image: nginx:latest
       networks:
          - web
-      ports: 
+      ports:
          - 80:80
          - 443:443
       volumes:
