@@ -10,4 +10,4 @@ class BuildTest(TestCase):
 
     def setUp(self):
         self.client = TestClient(app)
-        self.wwlangs = ['fr']
+        self.wwlangs = ["fr"]

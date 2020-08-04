@@ -12,19 +12,18 @@ class MainTest(TestCase):
 
     def setUp(self):
         self.client = TestClient(app)
-        self.wwlangs = ['fr']
-
+        self.wwlangs = ["fr"]
 
     def test_read_main(self):
         for lang in self.wwlangs:
-            with patch.dict('os.environ', {'WWLANG': lang}):
-                self.assertIn('WWLANG', os.environ)
+            with patch.dict("os.environ", {"WWLANG": lang}):
+                self.assertIn("WWLANG", os.environ)
                 for route in app.routes:
-                    if not "{" in route.path:
+                    if "{" not in route.path:
                         print(route.path)
                         response = self.client.get(route.path)
                         self.assertEqual(response.status_code, 200)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

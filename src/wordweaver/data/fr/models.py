@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Any, List, Optional, Union
+from typing import List, Optional, Union
 
 from pydantic import BaseModel
 
@@ -8,51 +8,58 @@ class TranslationBase(BaseModel):
     en: Union[str, dict]
     fr: Union[str, dict]
 
+
 class ModelConfig:
     use_enum_values = True
 
+
 class Morpheme(BaseModel):
-    value: str = ''
+    value: str = ""
     position: int = 0
 
 
 class TierOptions(BaseModel):
-    language: str = 'L1'
+    language: str = "L1"
     showName: bool = False
+
 
 class TierValues(str, Enum):
     # Must be key in ResponseMorpheme
-    gloss: "gloss"
-    english: "english"
-    value: "value"
+    gloss: "gloss"  # noqa: F821
+    english: "english"  # noqa: F821
+    value: "value"  # noqa: F821
+
 
 class Tier(BaseModel):
-    name: str = ''
-    separator: str = ''
+    name: str = ""
+    separator: str = ""
     position: int = 0
-    key: str = 'value' # Must be key in ResponseMorpheme
+    key: str = "value"  # Must be key in ResponseMorpheme
     options: TierOptions = TierOptions()
 
     Config = ModelConfig
 
 
 class Option(TranslationBase):
-    ''' Required '''
-    tag: str = ''
-    type: str = ''
+    """ Required """
+
+    tag: str = ""
+    type: str = ""
 
 
 class Pronoun(TranslationBase):
-    ''' Required '''
-    person: str = ''
-    number: str = ''
-    gender: str = ''
-    tag: str = ''
+    """ Required """
+
+    person: str = ""
+    number: str = ""
+    gender: str = ""
+    tag: str = ""
 
 
 class Verb(TranslationBase):
-    ''' Required '''
-    tag: str = ''
+    """ Required """
+
+    tag: str = ""
     classes: List[str] = []
 
 
