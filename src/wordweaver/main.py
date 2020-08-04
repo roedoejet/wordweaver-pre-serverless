@@ -6,7 +6,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
-
 from wordweaver.data import DATA_PATH, WWLANG
 from wordweaver.router import conjugations, options, pronouns, verbs
 

@@ -9,7 +9,6 @@ from jinja2 import Environment, FileSystemLoader
 from latex import build_pdf
 from pydantic import BaseModel
 from pylatexenc.latexencode import utf8tolatex
-
 from wordweaver.models import Response, Tier
 
 

@@ -1,7 +1,6 @@
 from unittest import TestCase
 
 from fastapi.testclient import TestClient
-
 from wordweaver.main import app
 
 

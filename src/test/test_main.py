@@ -3,7 +3,6 @@ from unittest import TestCase, main
 from unittest.mock import patch
 
 from fastapi.testclient import TestClient
-
 from wordweaver.main import app
 
 

@@ -4,7 +4,6 @@
 from typing import List
 
 from fastapi import APIRouter, HTTPException
-
 from wordweaver.data import PRONOUN_DATA
 from wordweaver.models import Pronoun
 

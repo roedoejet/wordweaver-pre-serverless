@@ -11,7 +11,6 @@ import requests
 from loguru import logger
 from pydantic.error_wrappers import ValidationError
 from tqdm import tqdm
-
 from wordweaver.data import (CONJUGATION_DATA, DATA_PATH, OPTION_DATA,
                              PRONOUN_DATA, VERB_DATA, WWLANG)
 from wordweaver.models import Option, Pronoun, ResponseObject, Verb
