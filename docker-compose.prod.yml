@@ -44,4 +44,3 @@ services:
          - ./volumes/ssl/certbot/www:/var/www/certbot
 networks:
    web:
-      external: true
