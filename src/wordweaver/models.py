@@ -15,7 +15,6 @@ if os.path.exists(os.path.join(DATA_DIR, WWLANG)):
     Verb = module.Verb
     Response = module.Response
     ResponseObject = module.ResponseObject
-    Tier = module.Tier
 else:
     logger.error(
         f"""Can't find '{WWLANG}', are you sure you 'WWLANG' is

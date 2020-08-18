@@ -1,0 +1,174 @@
+[
+    {
+        "input": {
+            "root": "sing",
+            "option": "present",
+            "agent": "1-sg"
+        },
+        "output": [
+            {
+                "position": 0,
+                "value": "cant",
+                "gloss": "sing"
+            },
+            {
+                "position": 1,
+                "value": "o",
+                "gloss": "1-sg"
+            }
+        ]
+    },
+    {
+        "input": {
+            "root": "sing",
+            "option": "present",
+            "agent": "2-sg"
+        },
+        "output": [
+            {
+                "position": 0,
+                "value": "cant",
+                "gloss": "sing"
+            },
+            {
+                "position": 1,
+                "value": "a",
+                "gloss": "2-sg"
+            }
+        ]
+    },
+    {
+        "input": {
+            "root": "sing",
+            "option": "future",
+            "agent": "1-sg"
+        },
+        "output": [
+            {
+                "position": 0,
+                "value": "cant",
+                "gloss": "sing"
+            },
+            {
+                "position": 1,
+                "value": "ar",
+                "gloss": "future"
+            },
+            {
+                "position": 2,
+                "value": "ei",
+                "gloss": "1-sg"
+            }
+        ]
+    },
+    {
+        "input": {
+            "root": "sing",
+            "option": "future",
+            "agent": "2-sg"
+        },
+        "output": [
+            {
+                "position": 0,
+                "value": "cant",
+                "gloss": "sing"
+            },
+            {
+                "position": 1,
+                "value": "ar",
+                "gloss": "future"
+            },
+            {
+                "position": 2,
+                "value": "ás",
+                "gloss": "2-sg"
+            }
+        ]
+    },
+    {
+        "input": {
+            "root": "eat",
+            "option": "present",
+            "agent": "1-sg"
+        },
+        "output": [
+            {
+                "position": 0,
+                "value": "com",
+                "gloss": "eat"
+            },
+            {
+                "position": 1,
+                "value": "o",
+                "gloss": "1-sg"
+            }
+        ]
+    },
+    {
+        "input": {
+            "root": "eat",
+            "option": "present",
+            "agent": "2-sg"
+        },
+        "output": [
+            {
+                "position": 0,
+                "value": "com",
+                "gloss": "eat"
+            },
+            {
+                "position": 1,
+                "value": "e",
+                "gloss": "2-sg"
+            }
+        ]
+    },
+    {
+        "input": {
+            "root": "eat",
+            "option": "future",
+            "agent": "1-sg"
+        },
+        "output": [
+            {
+                "position": 0,
+                "value": "com",
+                "gloss": "eat"
+            },
+            {
+                "position": 1,
+                "value": "er",
+                "gloss": "future"
+            },
+            {
+                "position": 2,
+                "value": "ei",
+                "gloss": "1-sg"
+            }
+        ]
+    },
+    {
+        "input": {
+            "root": "eat",
+            "option": "future",
+            "agent": "2-sg"
+        },
+        "output": [
+            {
+                "position": 0,
+                "value": "com",
+                "gloss": "eat"
+            },
+            {
+                "position": 1,
+                "value": "er",
+                "gloss": "future"
+            },
+            {
+                "position": 2,
+                "value": "ás",
+                "gloss": "2-sg"
+            }
+        ]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "tag": "sing",
+        "classes": [
+            "verb",
+            "transitive"
+        ]
+    },
+    {
+        "tag": "eat",
+        "classes": [
+            "verb",
+            "intransitive"
+        ]
+    }
+]

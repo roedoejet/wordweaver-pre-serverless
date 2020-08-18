@@ -29,7 +29,7 @@ def validate_data():
     # Shared messages
     CHECKING = "Checking {} {}..."
     ERROR = """Uh oh! not all of your {} matched the declared type.
-    \nYour tier looks like this:\n\n {}\n\n but we expected: \n\n{}"""
+    \nYour data looks like this:\n\n {}\n\n but we expected: \n\n{}"""
     # Check Options
     logger.info(CHECKING.format(len(OPTION_DATA), "options"))
     for option in tqdm(OPTION_DATA):

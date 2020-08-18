@@ -5,11 +5,6 @@ from pydantic import BaseModel
 
 class TranslationBase(BaseModel):
     en: Union[str, dict]
-    fr: Union[str, dict]
-
-
-class ModelConfig:
-    use_enum_values = True
 
 
 class Morpheme(BaseModel):
@@ -17,54 +12,36 @@ class Morpheme(BaseModel):
     position: int = 0
 
 
-class Option(TranslationBase):
-    """ Required """
-
-    tag: str = ""
-    type: str = ""
-
-
-class Pronoun(TranslationBase):
-    """ Required """
-
-    person: str = ""
-    number: str = ""
-    gender: str = ""
-    tag: str = ""
-
-
-class Verb(TranslationBase):
+class Verb(BaseModel):
     """ Required """
 
     tag: str = ""
     classes: List[str] = []
 
 
+class Pronoun(BaseModel):
+    """ Required """
+
+    tag: str = ""
+
+
+class Option(BaseModel):
+    """ Required """
+
+    tag: str = ""
+    type: str = ""
+
+
 class ConjugationInput(BaseModel):
     root: str
     option: str
-    agent: Union[List[str], str]
-
-
-class OptionalParam(BaseModel):
-    param: str
-    value: str
-
-
-class RequestParams(BaseModel):
-    root: List[str]
-    option: List[str]
-    agent: List[str]
-    patient: List[str]
-    optional: Optional[List[OptionalParam]]
+    agent: str
 
 
 class ResponseMorpheme(BaseModel):
     position: Optional[int]
     value: Optional[str]
     gloss: Optional[str]
-    english: Optional[str]
-    type: Optional[List[str]]
 
 
 Conjugation = List[ResponseMorpheme]

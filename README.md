@@ -10,8 +10,6 @@
 
 :warning: :construction: This repo is currently **under construction** :construction: :warning:
 
-<!-- Please visit the [docs](https://wordweaver.readthedocs.io/en/latest/?badge=latest) for more information! -->
-
 ## Table of Contents
 - [WordWeaver](#wordweaver)
   - [Table of Contents](#table-of-contents)
@@ -44,19 +42,17 @@ Note: there is a limitation with using a flat file architecture. We have some op
 
 1. After making sure you have the prerequisite technologies, clone this repo
 2. In the root of the repo, make the following changes:
-    * Create a new folder in `src/wordweaver/data/` (ideally with the ISO code of your language)
-    * Add an empty `__init__.py` file
-    * Copy one of the `models.py` files in the other data directories and past it into your folder
+    * Rename the folder in `src/wordweaver/data/yourlang` to a code for your language (ideally a 2 or 3 character code for your language, like an ISO 639-3 code)
     * Create four JSON files, `conjugations.json`, `options.json`, `pronouns.json` and `verbs.json`
     * Populate the files with the data required for your language
-    * Update the `models.py` file to reflect your data structure
+    * Update the `src/wordweaver/data/yourlang/models.py` file to reflect your data structure
     * Pip install `wordweaver` (`cd wordweaver && pip install -e .`)
+    * Change the `WWLANG` environment variable in `env-backend.env` to the name of your language folder
     * Validate your data: `wordweaver validate` and fix any type errors
     * Once the validation passes, go back to the root and run `docker-compose build`
     * Then, to run your local version, `docker-compose up`
     * You can stop the service by running `docker-compose down`
     * Then, visit `http://localhost:5200/docs` to see the details of using your API.
-    * Change the `WWLANG` environment variable in `env-backend.env` to the name of your language folder
 
 3. Head over to **wordweaver-UI** repo and configure that for usage with this API.
 
@@ -73,7 +69,7 @@ To run locally and deploy a basic service, you must have Docker installed, and t
 To build the production version:
 
 Requirements:
-  - VPS
+  - Access to a server
   - Domain
   - DNS control
 
@@ -81,11 +77,12 @@ Requirements:
 * Clone this repo
 * Change the email and domain in `.env`
 * run `init-letsencrypt.sh` to get an SSL cert for your site
+* If this passes without errors, and you want to run in production, change the STAGING variable in `.env` to 0 and re-run the `init-letsencrypt.sh` script.
 * run `docker-compose -f docker-compose.prod.yml up` to spin up your site
 
 ## Usage
 
-Please visit the docs for more information.
+Please visit the [docs](https://docs.wordweaver.ca) for more information.
 
 ## Maintainers
 
