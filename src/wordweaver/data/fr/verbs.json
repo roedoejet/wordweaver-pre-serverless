@@ -1,1 +1,732 @@
-[{"tag": "aller", "fr": "aller", "en": "go"}, {"tag": "avoir", "fr": "avoir", "en": "have"}, {"tag": "ravoir", "fr": "ravoir", "en": "get back"}, {"tag": "etre", "fr": "\u00eatre", "en": "be"}, {"tag": "abreger", "fr": "abr\u00e9ger", "en": "abridge"}, {"tag": "absoudre", "fr": "absoudre", "en": "absolve"}, {"tag": "accroitre", "fr": "accro\u00eetre", "en": "increase"}, {"tag": "acheter", "fr": "acheter", "en": "buy"}, {"tag": "acquerir", "fr": "acqu\u00e9rir", "en": "acquire"}, {"tag": "advenir", "fr": "advenir", "en": "happen"}, {"tag": "aimer", "fr": "aimer", "en": "love"}, {"tag": "aliener", "fr": "ali\u00e9ner", "en": "alienate"}, {"tag": "amuir", "fr": "amu\u00efr", "en": "mute"}, {"tag": "apparoir", "fr": "apparoir", "en": "appear"}, {"tag": "appeler", "fr": "appeler", "en": "call"}, {"tag": "asseoir", "fr": "asseoir", "en": "sit"}, {"tag": "asseoir", "fr": "asseoir", "en": "sit"}, {"tag": "assaillir", "fr": "assaillir", "en": "assault"}, {"tag": "boire", "fr": "boire", "en": "drink"}, {"tag": "battre", "fr": "battre", "en": "beat"}, {"tag": "bouillir", "fr": "bouillir", "en": "boil"}, {"tag": "braire", "fr": "braire", "en": "bray"}, {"tag": "bruire", "fr": "bruire", "en": "hum"}, {"tag": "brumasser", "fr": "brumasser", "en": "mist"}, {"tag": "ceder", "fr": "c\u00e9der", "en": "cede"}, {"tag": "choir", "fr": "choir", "en": "fall"}, {"tag": "chaloir", "fr": "chaloir", "en": "heat"}, {"tag": "chauvir"}, {"tag": "circoncire", "fr": "circoncire", "en": "circumsize"}, {"tag": "clore", "fr": "clore", "en": "close"}, {"tag": "conclure", "fr": "conclure", "en": "conclude"}, {"tag": "conduire", "fr": "conduire", "en": "drive"}, {"tag": "coudre", "fr": "coudre", "en": "sew"}, {"tag": "courir", "fr": "courir", "en": "run"}, {"tag": "croire", "fr": "croire", "en": "believe"}, {"tag": "croitre", "fr": "cro\u00eetre", "en": "increase"}, {"tag": "cremer", "fr": "cr\u00e9mer", "en": "ice"}, {"tag": "craindre", "fr": "craindre", "en": "be afraid"}, {"tag": "cueillir", "fr": "cueillir", "en": "pick"}, {"tag": "celebrer", "fr": "c\u00e9l\u00e9brer", "en": "celebrate"}, {"tag": "devoir", "fr": "devoir", "en": "have to"}, {"tag": "dire", "fr": "dire", "en": "have tosay"}, {"tag": "dissequer", "fr": "diss\u00e9quer", "en": "dissect"}, {"tag": "dissoudre", "fr": "dissoudre", "en": "disolve"}, {"tag": "dormir", "fr": "dormir", "en": "sleep"}, {"tag": "decevoir", "fr": "d\u00e9cevoir", "en": "deceive"}, {"tag": "dechoir", "fr": "d\u00e9choir", "en": "decline"}, {"tag": "decreter", "fr": "d\u00e9cr\u00e9ter", "en": "decree"}, {"tag": "depecer", "fr": "d\u00e9pecer", "en": "dismember"}, {"tag": "enfievrer", "fr": "enfi\u00e9vrer", "en": "have a fever"}, {"tag": "envoyer", "fr": "envoyer", "en": "have a feversend"}, {"tag": "ester"}, {"tag": "execrer", "fr": "ex\u00e9crer", "en": "execute"}, {"tag": "extraire", "fr": "extraire", "en": "extract"}, {"tag": "faire", "fr": "faire", "en": "make"}, {"tag": "faillir", "fr": "faillir", "en": "bankrupt"}, {"tag": "falloir", "fr": "falloir", "en": "have to"}, {"tag": "finir", "fr": "finir", "en": "finish"}, {"tag": "fleurir", "fr": "fleurir", "en": "flourish"}, {"tag": "forclore", "fr": "forclore", "en": "foreclose"}, {"tag": "foutre"}, {"tag": "frire", "fr": "frire", "en": "fry"}, {"tag": "fuir", "fr": "fuir", "en": "run away"}, {"tag": "ferir", "fr": "f\u00e9rir", "en": "make"}, {"tag": "gesir", "fr": "g\u00e9sir", "en": "lie"}, {"tag": "grasseyer", "fr": "grasseyer", "en": "speak with a uvulur R"}, {"tag": "hair", "fr": "ha\u00efr", "en": "hate"}, {"tag": "harceler", "fr": "harceler", "en": "harass"}, {"tag": "hebeter", "fr": "h\u00e9b\u00e9ter", "en": "stupefy"}, {"tag": "impetrer", "fr": "imp\u00e9trer", "en": "secure"}, {"tag": "inclure", "fr": "inclure", "en": "include"}, {"tag": "integrer", "fr": "int\u00e9grer", "en": "integrate"}, {"tag": "interdire", "fr": "interdire", "en": "interject"}, {"tag": "jeter", "fr": "jeter", "en": "throw"}, {"tag": "lever", "fr": "lever", "en": "lift up"}, {"tag": "lire", "fr": "lire", "en": "read"}, {"tag": "leguer", "fr": "l\u00e9guer", "en": "bequeth"}, {"tag": "leser", "fr": "l\u00e9ser", "en": "injure"}, {"tag": "luire", "fr": "luire", "en": "gleam"}, {"tag": "mener", "fr": "mener", "en": "conduct"}, {"tag": "mettre", "fr": "mettre", "en": "put"}, {"tag": "mourir", "fr": "mourir", "en": "die"}, {"tag": "mouvoir", "fr": "mouvoir", "en": "move"}, {"tag": "manger", "fr": "manger", "en": "eat"}, {"tag": "maudire", "fr": "maudire", "en": "curse"}, {"tag": "mentir", "fr": "mentir", "en": "lie"}, {"tag": "moudre", "fr": "moudre", "en": "grind"}, {"tag": "medire", "fr": "m\u00e9dire", "en": "besmirch"}, {"tag": "naitre", "fr": "na\u00eetre", "en": "be born"}, {"tag": "nettoyer", "fr": "nettoyer", "en": "clean"}, {"tag": "nuire", "fr": "nuire", "en": "harm"}, {"tag": "ouir", "fr": "ou\u00efr", "en": "hear"}, {"tag": "occire", "fr": "occire", "en": "slay"}, {"tag": "oindre", "fr": "oindre", "en": "anoint"}, {"tag": "ouvrir", "fr": "ouvrir", "en": "open"}, {"tag": "paitre", "fr": "pa\u00eetre", "en": "graze"}, {"tag": "peler", "fr": "peler", "en": "peel"}, {"tag": "peser", "fr": "peser", "en": "weigh"}, {"tag": "pouvoir", "fr": "pouvoir", "en": "be able to"}, {"tag": "payer", "fr": "payer", "en": "pay"}, {"tag": "paraitre", "fr": "para\u00eetre", "en": "appear"}, {"tag": "plaire", "fr": "plaire", "en": "please"}, {"tag": "pleuvoir", "fr": "pleuvoir", "en": "cry"}, {"tag": "placer", "fr": "placer", "en": "place"}, {"tag": "poindre", "fr": "poindre", "en": "dawn"}, {"tag": "pourvoir", "fr": "pourvoir", "en": "cater"}, {"tag": "prendre", "fr": "prendre", "en": "take"}, {"tag": "promouvoir", "fr": "promouvoir", "en": "promote"}, {"tag": "predire", "fr": "pr\u00e9dire", "en": "predict"}, {"tag": "prevoir", "fr": "pr\u00e9voir", "en": "preview"}, {"tag": "prevaloir", "fr": "pr\u00e9valoir", "en": "prevail"}, {"tag": "querir", "fr": "qu\u00e9rir", "en": "quest"}, {"tag": "rire", "fr": "rire", "en": "laugh"}, {"tag": "regler", "fr": "r\u00e9gler", "en": "adjust"}, {"tag": "regner", "fr": "r\u00e9gner", "en": "reign"}, {"tag": "receper", "fr": "rec\u00e9per", "en": "ratoon"}, {"tag": "receper", "fr": "rec\u00e9per", "en": "ratoon"}, {"tag": "recroitre", "fr": "recro\u00eetre", "en": "grow again"}, {"tag": "renaitre", "fr": "rena\u00eetre", "en": "be reborn"}, {"tag": "repaitre", "fr": "repa\u00eetre", "en": "regraze"}, {"tag": "rompre", "fr": "rompre", "en": "break up"}, {"tag": "referer", "fr": "r\u00e9f\u00e9rer", "en": "refer"}, {"tag": "referencier", "fr": "r\u00e9f\u00e9rencier", "en": "reference"}, {"tag": "resoudre", "fr": "r\u00e9soudre", "en": "resolve"}, {"tag": "reveler", "fr": "r\u00e9v\u00e9ler", "en": "reveal"}, {"tag": "savoir", "fr": "savoir", "en": "know"}, {"tag": "semer", "fr": "semer", "en": "sow"}, {"tag": "seoir", "fr": "seoir", "en": "suit"}, {"tag": "sevrer", "fr": "sevrer", "en": "sever"}, {"tag": "sourdre", "fr": "sourdre", "en": "weld"}, {"tag": "secher", "fr": "s\u00e9cher", "en": "dry"}, {"tag": "saillir", "fr": "saillir", "en": "salinate"}, {"tag": "servir", "fr": "servir", "en": "serve"}, {"tag": "suffire", "fr": "suffire", "en": "suffer"}, {"tag": "suivre", "fr": "suivre", "en": "follow"}, {"tag": "surseoir", "fr": "surseoir", "en": "postpone"}, {"tag": "sursoir", "fr": "sursoir", "en": "stay"}, {"tag": "taire", "fr": "taire", "en": "quieten"}, {"tag": "tenir", "fr": "tenir", "en": "hold"}, {"tag": "tendre", "fr": "tendre", "en": "reach out"}, {"tag": "vivre", "fr": "vivre", "en": "live"}, {"tag": "voir", "fr": "voir", "en": "see"}, {"tag": "vouloir", "fr": "vouloir", "en": "want"}, {"tag": "valoir", "fr": "valoir", "en": "be worth"}, {"tag": "vaincre", "fr": "vaincre", "en": "defeat"}, {"tag": "vetir", "fr": "v\u00eatir", "en": "clothe"}, {"tag": "echoir", "fr": "\u00e9choir", "en": "come due"}, {"tag": "eclore", "fr": "\u00e9clore", "en": "bloom"}, {"tag": "ecrire", "fr": "\u00e9crire", "en": "write"}]
+[
+    {
+        "tag": "aller",
+        "fr": "aller",
+        "en": "go"
+    },
+    {
+        "tag": "avoir",
+        "fr": "avoir",
+        "en": "have"
+    },
+    {
+        "tag": "ravoir",
+        "fr": "ravoir",
+        "en": "get back"
+    },
+    {
+        "tag": "etre",
+        "fr": "\u00eatre",
+        "en": "be"
+    },
+    {
+        "tag": "abreger",
+        "fr": "abr\u00e9ger",
+        "en": "abridge"
+    },
+    {
+        "tag": "absoudre",
+        "fr": "absoudre",
+        "en": "absolve"
+    },
+    {
+        "tag": "accroitre",
+        "fr": "accro\u00eetre",
+        "en": "increase"
+    },
+    {
+        "tag": "acheter",
+        "fr": "acheter",
+        "en": "buy"
+    },
+    {
+        "tag": "acquerir",
+        "fr": "acqu\u00e9rir",
+        "en": "acquire"
+    },
+    {
+        "tag": "advenir",
+        "fr": "advenir",
+        "en": "happen"
+    },
+    {
+        "tag": "aimer",
+        "fr": "aimer",
+        "en": "love"
+    },
+    {
+        "tag": "aliener",
+        "fr": "ali\u00e9ner",
+        "en": "alienate"
+    },
+    {
+        "tag": "amuir",
+        "fr": "amu\u00efr",
+        "en": "mute"
+    },
+    {
+        "tag": "apparoir",
+        "fr": "apparoir",
+        "en": "appear"
+    },
+    {
+        "tag": "appeler",
+        "fr": "appeler",
+        "en": "call"
+    },
+    {
+        "tag": "asseoir",
+        "fr": "asseoir",
+        "en": "sit"
+    },
+    {
+        "tag": "asseoir",
+        "fr": "asseoir",
+        "en": "sit"
+    },
+    {
+        "tag": "assaillir",
+        "fr": "assaillir",
+        "en": "assault"
+    },
+    {
+        "tag": "boire",
+        "fr": "boire",
+        "en": "drink"
+    },
+    {
+        "tag": "battre",
+        "fr": "battre",
+        "en": "beat"
+    },
+    {
+        "tag": "bouillir",
+        "fr": "bouillir",
+        "en": "boil"
+    },
+    {
+        "tag": "braire",
+        "fr": "braire",
+        "en": "bray"
+    },
+    {
+        "tag": "bruire",
+        "fr": "bruire",
+        "en": "hum"
+    },
+    {
+        "tag": "brumasser",
+        "fr": "brumasser",
+        "en": "mist"
+    },
+    {
+        "tag": "ceder",
+        "fr": "c\u00e9der",
+        "en": "cede"
+    },
+    {
+        "tag": "choir",
+        "fr": "choir",
+        "en": "fall"
+    },
+    {
+        "tag": "chaloir",
+        "fr": "chaloir",
+        "en": "heat"
+    },
+    {
+        "tag": "circoncire",
+        "fr": "circoncire",
+        "en": "circumsize"
+    },
+    {
+        "tag": "clore",
+        "fr": "clore",
+        "en": "close"
+    },
+    {
+        "tag": "conclure",
+        "fr": "conclure",
+        "en": "conclude"
+    },
+    {
+        "tag": "conduire",
+        "fr": "conduire",
+        "en": "drive"
+    },
+    {
+        "tag": "coudre",
+        "fr": "coudre",
+        "en": "sew"
+    },
+    {
+        "tag": "courir",
+        "fr": "courir",
+        "en": "run"
+    },
+    {
+        "tag": "croire",
+        "fr": "croire",
+        "en": "believe"
+    },
+    {
+        "tag": "croitre",
+        "fr": "cro\u00eetre",
+        "en": "increase"
+    },
+    {
+        "tag": "cremer",
+        "fr": "cr\u00e9mer",
+        "en": "ice"
+    },
+    {
+        "tag": "craindre",
+        "fr": "craindre",
+        "en": "be afraid"
+    },
+    {
+        "tag": "cueillir",
+        "fr": "cueillir",
+        "en": "pick"
+    },
+    {
+        "tag": "celebrer",
+        "fr": "c\u00e9l\u00e9brer",
+        "en": "celebrate"
+    },
+    {
+        "tag": "devoir",
+        "fr": "devoir",
+        "en": "have to"
+    },
+    {
+        "tag": "dire",
+        "fr": "dire",
+        "en": "have tosay"
+    },
+    {
+        "tag": "dissequer",
+        "fr": "diss\u00e9quer",
+        "en": "dissect"
+    },
+    {
+        "tag": "dissoudre",
+        "fr": "dissoudre",
+        "en": "disolve"
+    },
+    {
+        "tag": "dormir",
+        "fr": "dormir",
+        "en": "sleep"
+    },
+    {
+        "tag": "decevoir",
+        "fr": "d\u00e9cevoir",
+        "en": "deceive"
+    },
+    {
+        "tag": "dechoir",
+        "fr": "d\u00e9choir",
+        "en": "decline"
+    },
+    {
+        "tag": "decreter",
+        "fr": "d\u00e9cr\u00e9ter",
+        "en": "decree"
+    },
+    {
+        "tag": "depecer",
+        "fr": "d\u00e9pecer",
+        "en": "dismember"
+    },
+    {
+        "tag": "enfievrer",
+        "fr": "enfi\u00e9vrer",
+        "en": "have a fever"
+    },
+    {
+        "tag": "envoyer",
+        "fr": "envoyer",
+        "en": "have a feversend"
+    },
+    {
+        "tag": "execrer",
+        "fr": "ex\u00e9crer",
+        "en": "execute"
+    },
+    {
+        "tag": "extraire",
+        "fr": "extraire",
+        "en": "extract"
+    },
+    {
+        "tag": "faire",
+        "fr": "faire",
+        "en": "make"
+    },
+    {
+        "tag": "faillir",
+        "fr": "faillir",
+        "en": "bankrupt"
+    },
+    {
+        "tag": "falloir",
+        "fr": "falloir",
+        "en": "have to"
+    },
+    {
+        "tag": "finir",
+        "fr": "finir",
+        "en": "finish"
+    },
+    {
+        "tag": "fleurir",
+        "fr": "fleurir",
+        "en": "flourish"
+    },
+    {
+        "tag": "forclore",
+        "fr": "forclore",
+        "en": "foreclose"
+    },
+    {
+        "tag": "frire",
+        "fr": "frire",
+        "en": "fry"
+    },
+    {
+        "tag": "fuir",
+        "fr": "fuir",
+        "en": "run away"
+    },
+    {
+        "tag": "ferir",
+        "fr": "f\u00e9rir",
+        "en": "make"
+    },
+    {
+        "tag": "gesir",
+        "fr": "g\u00e9sir",
+        "en": "lie"
+    },
+    {
+        "tag": "grasseyer",
+        "fr": "grasseyer",
+        "en": "speak with a uvulur R"
+    },
+    {
+        "tag": "hair",
+        "fr": "ha\u00efr",
+        "en": "hate"
+    },
+    {
+        "tag": "harceler",
+        "fr": "harceler",
+        "en": "harass"
+    },
+    {
+        "tag": "hebeter",
+        "fr": "h\u00e9b\u00e9ter",
+        "en": "stupefy"
+    },
+    {
+        "tag": "impetrer",
+        "fr": "imp\u00e9trer",
+        "en": "secure"
+    },
+    {
+        "tag": "inclure",
+        "fr": "inclure",
+        "en": "include"
+    },
+    {
+        "tag": "integrer",
+        "fr": "int\u00e9grer",
+        "en": "integrate"
+    },
+    {
+        "tag": "interdire",
+        "fr": "interdire",
+        "en": "interject"
+    },
+    {
+        "tag": "jeter",
+        "fr": "jeter",
+        "en": "throw"
+    },
+    {
+        "tag": "lever",
+        "fr": "lever",
+        "en": "lift up"
+    },
+    {
+        "tag": "lire",
+        "fr": "lire",
+        "en": "read"
+    },
+    {
+        "tag": "leguer",
+        "fr": "l\u00e9guer",
+        "en": "bequeth"
+    },
+    {
+        "tag": "leser",
+        "fr": "l\u00e9ser",
+        "en": "injure"
+    },
+    {
+        "tag": "luire",
+        "fr": "luire",
+        "en": "gleam"
+    },
+    {
+        "tag": "mener",
+        "fr": "mener",
+        "en": "conduct"
+    },
+    {
+        "tag": "mettre",
+        "fr": "mettre",
+        "en": "put"
+    },
+    {
+        "tag": "mourir",
+        "fr": "mourir",
+        "en": "die"
+    },
+    {
+        "tag": "mouvoir",
+        "fr": "mouvoir",
+        "en": "move"
+    },
+    {
+        "tag": "manger",
+        "fr": "manger",
+        "en": "eat"
+    },
+    {
+        "tag": "maudire",
+        "fr": "maudire",
+        "en": "curse"
+    },
+    {
+        "tag": "mentir",
+        "fr": "mentir",
+        "en": "lie"
+    },
+    {
+        "tag": "moudre",
+        "fr": "moudre",
+        "en": "grind"
+    },
+    {
+        "tag": "medire",
+        "fr": "m\u00e9dire",
+        "en": "besmirch"
+    },
+    {
+        "tag": "naitre",
+        "fr": "na\u00eetre",
+        "en": "be born"
+    },
+    {
+        "tag": "nettoyer",
+        "fr": "nettoyer",
+        "en": "clean"
+    },
+    {
+        "tag": "nuire",
+        "fr": "nuire",
+        "en": "harm"
+    },
+    {
+        "tag": "ouir",
+        "fr": "ou\u00efr",
+        "en": "hear"
+    },
+    {
+        "tag": "occire",
+        "fr": "occire",
+        "en": "slay"
+    },
+    {
+        "tag": "oindre",
+        "fr": "oindre",
+        "en": "anoint"
+    },
+    {
+        "tag": "ouvrir",
+        "fr": "ouvrir",
+        "en": "open"
+    },
+    {
+        "tag": "paitre",
+        "fr": "pa\u00eetre",
+        "en": "graze"
+    },
+    {
+        "tag": "peler",
+        "fr": "peler",
+        "en": "peel"
+    },
+    {
+        "tag": "peser",
+        "fr": "peser",
+        "en": "weigh"
+    },
+    {
+        "tag": "pouvoir",
+        "fr": "pouvoir",
+        "en": "be able to"
+    },
+    {
+        "tag": "payer",
+        "fr": "payer",
+        "en": "pay"
+    },
+    {
+        "tag": "paraitre",
+        "fr": "para\u00eetre",
+        "en": "appear"
+    },
+    {
+        "tag": "plaire",
+        "fr": "plaire",
+        "en": "please"
+    },
+    {
+        "tag": "pleuvoir",
+        "fr": "pleuvoir",
+        "en": "cry"
+    },
+    {
+        "tag": "placer",
+        "fr": "placer",
+        "en": "place"
+    },
+    {
+        "tag": "poindre",
+        "fr": "poindre",
+        "en": "dawn"
+    },
+    {
+        "tag": "pourvoir",
+        "fr": "pourvoir",
+        "en": "cater"
+    },
+    {
+        "tag": "prendre",
+        "fr": "prendre",
+        "en": "take"
+    },
+    {
+        "tag": "promouvoir",
+        "fr": "promouvoir",
+        "en": "promote"
+    },
+    {
+        "tag": "predire",
+        "fr": "pr\u00e9dire",
+        "en": "predict"
+    },
+    {
+        "tag": "prevoir",
+        "fr": "pr\u00e9voir",
+        "en": "preview"
+    },
+    {
+        "tag": "prevaloir",
+        "fr": "pr\u00e9valoir",
+        "en": "prevail"
+    },
+    {
+        "tag": "querir",
+        "fr": "qu\u00e9rir",
+        "en": "quest"
+    },
+    {
+        "tag": "rire",
+        "fr": "rire",
+        "en": "laugh"
+    },
+    {
+        "tag": "regler",
+        "fr": "r\u00e9gler",
+        "en": "adjust"
+    },
+    {
+        "tag": "regner",
+        "fr": "r\u00e9gner",
+        "en": "reign"
+    },
+    {
+        "tag": "receper",
+        "fr": "rec\u00e9per",
+        "en": "ratoon"
+    },
+    {
+        "tag": "receper",
+        "fr": "rec\u00e9per",
+        "en": "ratoon"
+    },
+    {
+        "tag": "recroitre",
+        "fr": "recro\u00eetre",
+        "en": "grow again"
+    },
+    {
+        "tag": "renaitre",
+        "fr": "rena\u00eetre",
+        "en": "be reborn"
+    },
+    {
+        "tag": "repaitre",
+        "fr": "repa\u00eetre",
+        "en": "regraze"
+    },
+    {
+        "tag": "rompre",
+        "fr": "rompre",
+        "en": "break up"
+    },
+    {
+        "tag": "referer",
+        "fr": "r\u00e9f\u00e9rer",
+        "en": "refer"
+    },
+    {
+        "tag": "referencier",
+        "fr": "r\u00e9f\u00e9rencier",
+        "en": "reference"
+    },
+    {
+        "tag": "resoudre",
+        "fr": "r\u00e9soudre",
+        "en": "resolve"
+    },
+    {
+        "tag": "reveler",
+        "fr": "r\u00e9v\u00e9ler",
+        "en": "reveal"
+    },
+    {
+        "tag": "savoir",
+        "fr": "savoir",
+        "en": "know"
+    },
+    {
+        "tag": "semer",
+        "fr": "semer",
+        "en": "sow"
+    },
+    {
+        "tag": "seoir",
+        "fr": "seoir",
+        "en": "suit"
+    },
+    {
+        "tag": "sevrer",
+        "fr": "sevrer",
+        "en": "sever"
+    },
+    {
+        "tag": "sourdre",
+        "fr": "sourdre",
+        "en": "weld"
+    },
+    {
+        "tag": "secher",
+        "fr": "s\u00e9cher",
+        "en": "dry"
+    },
+    {
+        "tag": "saillir",
+        "fr": "saillir",
+        "en": "salinate"
+    },
+    {
+        "tag": "servir",
+        "fr": "servir",
+        "en": "serve"
+    },
+    {
+        "tag": "suffire",
+        "fr": "suffire",
+        "en": "suffer"
+    },
+    {
+        "tag": "suivre",
+        "fr": "suivre",
+        "en": "follow"
+    },
+    {
+        "tag": "surseoir",
+        "fr": "surseoir",
+        "en": "postpone"
+    },
+    {
+        "tag": "sursoir",
+        "fr": "sursoir",
+        "en": "stay"
+    },
+    {
+        "tag": "taire",
+        "fr": "taire",
+        "en": "quieten"
+    },
+    {
+        "tag": "tenir",
+        "fr": "tenir",
+        "en": "hold"
+    },
+    {
+        "tag": "tendre",
+        "fr": "tendre",
+        "en": "reach out"
+    },
+    {
+        "tag": "vivre",
+        "fr": "vivre",
+        "en": "live"
+    },
+    {
+        "tag": "voir",
+        "fr": "voir",
+        "en": "see"
+    },
+    {
+        "tag": "vouloir",
+        "fr": "vouloir",
+        "en": "want"
+    },
+    {
+        "tag": "valoir",
+        "fr": "valoir",
+        "en": "be worth"
+    },
+    {
+        "tag": "vaincre",
+        "fr": "vaincre",
+        "en": "defeat"
+    },
+    {
+        "tag": "vetir",
+        "fr": "v\u00eatir",
+        "en": "clothe"
+    },
+    {
+        "tag": "echoir",
+        "fr": "\u00e9choir",
+        "en": "come due"
+    },
+    {
+        "tag": "eclore",
+        "fr": "\u00e9clore",
+        "en": "bloom"
+    },
+    {
+        "tag": "ecrire",
+        "fr": "\u00e9crire",
+        "en": "write"
+    }
+]

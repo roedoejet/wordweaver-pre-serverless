@@ -8,7 +8,7 @@ from aiofiles import os as aos
 from fastapi import APIRouter, Query
 from fastapi.responses import FileResponse
 from wordweaver.data import CONJUGATION_DATA, DATA_PATH, WWLANG
-from wordweaver.models import Response, Tier
+from wordweaver.models import Response
 from wordweaver.router.utils import CsvFile, DocxFile, FileSettings, LatexFile
 
 router = APIRouter()
@@ -24,7 +24,7 @@ class ResponseType(str, Enum):
 def create_files(
     conjugations,
     file_type: ResponseType = Query("docx", alias="file-type"),
-    tiers: List[Tier] = None,
+    tiers=None,
     settings: FileSettings = FileSettings(),
 ):
     if file_type == "docx":
@@ -107,7 +107,7 @@ def create_files_from_file_request(
     agent: List[str] = Query(None),
     patient: List[str] = Query(None),
     file_type: ResponseType = Query("docx", alias="file-type"),
-    tiers: List[Tier] = None,
+    tiers=None,
     settings: FileSettings = FileSettings(),
 ):
     filtered = filter_conjugations(

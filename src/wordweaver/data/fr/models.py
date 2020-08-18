@@ -1,4 +1,3 @@
-from enum import Enum
 from typing import List, Optional, Union
 
 from pydantic import BaseModel
@@ -16,28 +15,6 @@ class ModelConfig:
 class Morpheme(BaseModel):
     value: str = ""
     position: int = 0
-
-
-class TierOptions(BaseModel):
-    language: str = "L1"
-    showName: bool = False
-
-
-class TierValues(str, Enum):
-    # Must be key in ResponseMorpheme
-    gloss: "gloss"  # noqa: F821
-    english: "english"  # noqa: F821
-    value: "value"  # noqa: F821
-
-
-class Tier(BaseModel):
-    name: str = ""
-    separator: str = ""
-    position: int = 0
-    key: str = "value"  # Must be key in ResponseMorpheme
-    options: TierOptions = TierOptions()
-
-    Config = ModelConfig
 
 
 class Option(TranslationBase):

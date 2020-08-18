@@ -2,14 +2,13 @@ import csv
 import os
 import re
 from tempfile import mkstemp
-from typing import List
 
 from docx import Document
 from jinja2 import Environment, FileSystemLoader
 from latex import build_pdf
 from pydantic import BaseModel
 from pylatexenc.latexencode import utf8tolatex
-from wordweaver.models import Response, Tier
+from wordweaver.models import Response
 
 
 class FileSettings(BaseModel):
@@ -21,7 +20,7 @@ class File:
     """[summary]
     """
 
-    def __init__(self, conjugations: Response = None, tiers: List[Tier] = None):
+    def __init__(self, conjugations: Response = None, tiers=None):
         self._conjugations = conjugations
         self._tiers = tiers
         self.format()
