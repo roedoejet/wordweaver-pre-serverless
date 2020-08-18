@@ -24,27 +24,25 @@ class Tier(BaseModel):
 
 class Verb(BaseModel):
     ''' Required '''
-    gloss: str = ''
     tag: str = ''
     classes: List[str] = []
 
 
 class Pronoun(BaseModel):
     ''' Required '''
-    gloss: str = ''
     tag: str = ''
 
 
 class Option(BaseModel):
     ''' Required '''
-    gloss: str = ''
     tag: str = ''
+    type: str = ''
 
 
 class ConjugationInput(BaseModel):
     root: str
     option: str
-    agent: str
+    subject: str
 
 
 class ResponseMorpheme(BaseModel):
