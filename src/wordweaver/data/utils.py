@@ -30,6 +30,7 @@ def validate_data():
     CHECKING = "Checking {} {}..."
     ERROR = """Uh oh! not all of your {} matched the declared type.
     \nYour tier looks like this:\n\n {}\n\n but we expected: \n\n{}"""
+    any_errors = False
     # Check Options
     logger.info(CHECKING.format(len(OPTION_DATA), "options"))
     for option in tqdm(OPTION_DATA):
@@ -41,7 +42,8 @@ def validate_data():
                     "options", pformat(option), pformat(Option.schema()["properties"])
                 )
             )
-            return
+            any_errors = True
+            continue
     # Check Pronouns
     logger.info(CHECKING.format(len(PRONOUN_DATA), "pronouns"))
     for pronoun in tqdm(PRONOUN_DATA):
@@ -55,7 +57,8 @@ def validate_data():
                     pformat(Pronoun.schema()["properties"]),
                 )
             )
-            return
+            any_errors = True
+            continue
     # Check Verbs
     logger.info(CHECKING.format(len(VERB_DATA), "verbs"))
     for verb in tqdm(VERB_DATA):
@@ -67,7 +70,8 @@ def validate_data():
                     "verbs", pformat(verb), pformat(Verb.schema()["properties"])
                 )
             )
-            return
+            any_errors = True
+            continue
     # Check Conjugations
     logger.info(CHECKING.format(len(CONJUGATION_DATA), "conjugations"))
     for conjugation in tqdm(CONJUGATION_DATA):
@@ -81,13 +85,18 @@ def validate_data():
                     pformat(ResponseObject.schema()["properties"]),
                 )
             )
-            return
-    logger.info("Success! All data checked")
+            any_errors = True
+            continue
+    if not any_errors:
+        logger.info("Success! All data checked")
+    else:
+        logger.error(
+            "Uh oh! Not all data passed the checks, please look at logged output above for more information."
+        )
 
 
 def gzip_assets():
-    """ This function gzips all of your json data.
-    """
+    """This function gzips all of your json data."""
     logger.info("Starting to optimize and gzip assets")
     p = Path(os.path.join(DATA_PATH, WWLANG))
     for fn in tqdm(list(p.glob("*.json")) + list(p.glob("i18n/*.json"))):
