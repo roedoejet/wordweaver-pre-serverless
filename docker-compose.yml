@@ -15,6 +15,6 @@ services:
          - SERVER_HOST=http://${DOMAIN}
          - SERVER_NAME=${DOMAIN}
       ports:
-         - 80:8080
+         - 80:80
       volumes:
          - ./src/wordweaver:/app/wordweaver

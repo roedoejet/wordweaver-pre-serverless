@@ -1,0 +1,10 @@
+requests
+loguru
+click
+tqdm
+python-docx
+aiofiles
+Jinja2
+pylatexenc
+latex
+fastapi
