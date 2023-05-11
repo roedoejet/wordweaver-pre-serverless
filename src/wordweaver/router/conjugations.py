@@ -5,9 +5,9 @@ from enum import Enum
 from typing import List
 
 from aiofiles import os as aos
-from fastapi import APIRouter, Query
+from fastapi import APIRouter, Query, HTTPException
 from fastapi.responses import FileResponse
-from wordweaver.data import CONJUGATION_DATA, DATA_PATH, WWLANG
+from wordweaver.data import CONJUGATION_DATA, DATA_PATH, WWLANG, load_conjugation_data
 from wordweaver.models import Response, Tier
 from wordweaver.router.utils import CsvFile, DocxFile, FileSettings, LatexFile
 
@@ -68,6 +68,7 @@ def filter_conjugations(
     agent: List[str] = Query(None),
     patient: List[str] = Query(None),
 ):
+    load_conjugation_data()
     filtered = CONJUGATION_DATA
     if root or agent or patient or option:
         for k, v in {
@@ -89,6 +90,7 @@ def read_conjugations_from_file(
     patient: List[str] = Query(None),
 ) -> Response:
     if root or agent or patient or option:
+        raise HTTPException(400, "Server side filtering of conjugations is disabled on this server")
         return filter_conjugations(
             root=root, option=option, agent=agent, patient=patient
         )
@@ -110,6 +112,7 @@ def create_files_from_file_request(
     tiers: List[Tier] = None,
     settings: FileSettings = FileSettings(),
 ):
+    raise HTTPException(400, "Server side filtering of conjugations is disabled on this server")
     filtered = filter_conjugations(
         root=root, option=option, agent=agent, patient=patient
     )

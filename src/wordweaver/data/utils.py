@@ -17,6 +17,7 @@ from wordweaver.data import (
     PRONOUN_DATA,
     VERB_DATA,
     WWLANG,
+    load_conjugation_data,
 )
 from wordweaver.models import Option, Pronoun, ResponseObject, Verb
 
@@ -73,6 +74,7 @@ def validate_data():
             any_errors = True
             continue
     # Check Conjugations
+    load_conjugation_data()
     logger.info(CHECKING.format(len(CONJUGATION_DATA), "conjugations"))
     for conjugation in tqdm(CONJUGATION_DATA):
         try:
