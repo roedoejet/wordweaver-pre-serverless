@@ -16,3 +16,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: wordweaver validate
         run: wordweaver validate
+      - name: wordweaver compress check
+        run: |
+          wordweaver compress
+          if git status --porcelain=v1 | grep '^ M .*.json.gz'; then echo Error: Please run \"wordweaver compress\"; false; else echo OK; fi
