@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import gzip
+import io
 import json
 import os
 import sys
@@ -118,10 +119,18 @@ def gzip_assets():
             data.sort(key=lambda o: o["input"][longest_key], reverse=True)
             assert all(set(o.keys()) == {"input", "output"} for o in data)
 
-        with gzip.open(file_path + ".gz", "wt") as zipfile:
-            json.dump(
-                data, zipfile, separators=(",", ":"), ensure_ascii=False, sort_keys=True
-            )
+        # use gzip.GzipFile instead of gzip.open because that lets us set mtime
+        # and thus create the same output every time, instead of embedding the
+        # ever changing current time at the beginning of the .gz file.
+        with gzip.GzipFile(file_path + ".gz", "wb", mtime=0) as zipfile_raw:
+            with io.TextIOWrapper(zipfile_raw, encoding="utf-8") as zipfile:
+                json.dump(
+                    data,
+                    zipfile,
+                    separators=(",", ":"),
+                    ensure_ascii=False,
+                    sort_keys=True,
+                )
 
 
 def create_protobufs():
