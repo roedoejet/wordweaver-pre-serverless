@@ -1,10 +1,9 @@
-
 # Created by https://www.gitignore.io/api/macos,python
 # Edit at https://www.gitignore.io/?templates=macos,python
 
 ### Custom ###
 docker-stack.yml
-src/wordweaver/data/*/*.json.gz
+src/wordweaver/data/*/conjugations.json
 src/wordweaver/data/*/i18n/*.json.gz
 .vscode
 
