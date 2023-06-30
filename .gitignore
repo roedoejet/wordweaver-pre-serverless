@@ -4,6 +4,8 @@
 ### Custom ###
 docker-stack.yml
 src/wordweaver/data/*/conjugations.json
+src/wordweaver/data/*/*.json.gz
+!src/wordweaver/data/*/conjugations.json.gz
 src/wordweaver/data/*/i18n/*.json.gz
 .vscode
 
