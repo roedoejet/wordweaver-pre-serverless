@@ -101,13 +101,20 @@ def validate_data():
 def gzip_assets():
     """This function gzips all of your json data."""
     logger.info("Starting to optimize and gzip assets")
-    p = Path(os.path.join(DATA_PATH, WWLANG))
-    for fn in tqdm(list(p.glob("*.json")) + list(p.glob("i18n/*.json"))):
+    lang_path = Path(DATA_PATH, WWLANG)
+    to_compress = list(lang_path.glob("*.json")) + list(lang_path.glob("i18n/*.json"))
+    if lang_path / "conjugations.json" not in to_compress:
+        to_compress.append(lang_path / "conjugations.json.gz")
+    for fn in tqdm(to_compress):
         logger.info(f"Optimizing and gzipping '{fn.name}'")
         # if fn.stat().st_size > 1400:
-        file_path = str(fn)
-        with open(file_path) as f:
-            data = json.load(f)
+        if fn.suffix == ".gz":
+            with gzip.open(fn, "rt", encoding="utf-8") as f:
+                data = json.load(f)
+            fn = fn.parent / fn.name[:-3]  # remove .gz extension
+        else:
+            with open(fn) as f:
+                data = json.load(f)
 
         if "conjugations.json" == fn.name:
             longest = 0
@@ -122,7 +129,7 @@ def gzip_assets():
         # use gzip.GzipFile instead of gzip.open because that lets us set mtime
         # and thus create the same output every time, instead of embedding the
         # ever changing current time at the beginning of the .gz file.
-        with gzip.GzipFile(file_path + ".gz", "wb", mtime=0) as zipfile_raw:
+        with gzip.GzipFile(str(fn) + ".gz", "wb", mtime=0) as zipfile_raw:
             with io.TextIOWrapper(zipfile_raw, encoding="utf-8") as zipfile:
                 json.dump(
                     data,
@@ -224,7 +231,6 @@ def i18n_extract(langs, **kwargs):
 
 
 def i18n_add(langs, **kwargs):
-
     logger.info(f"Adding translations for {WWLANG}")
     assets = ["pronouns", "options", "verbs"]
     if kwargs["assets"]:
