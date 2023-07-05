@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List, Optional, Union
+from typing import List, Optional, Union, NamedTuple
 
 from pydantic import BaseModel
 
@@ -82,7 +82,7 @@ class RequestParams(BaseModel):
     optional: Optional[List[OptionalParam]]
 
 
-class ResponseMorpheme(BaseModel):
+class ResponseMorpheme(NamedTuple):
     position: Optional[int]
     value: Optional[str]
     gloss: Optional[str]
